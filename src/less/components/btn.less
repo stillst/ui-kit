@@ -1,0 +1,71 @@
+/***************************
+************BTNS************
+***************************/
+.btn
+{
+  position: relative;
+  cursor: pointer;
+  color: #fff;
+  padding: 10px 40px;
+  border-radius: 4px;
+  border: none;
+  margin-right: 20px;
+  outline: none;
+  background-color: @green-color;
+  box-shadow: 0 3px 0 0 @green-shadow;
+  
+  &:hover
+  {
+    background-color: @lighter-green-color;
+    box-shadow: 0 3px 0 0 @lighter-green-shadow;
+  }
+
+  &:active
+  {      
+    top: 3px;
+    box-shadow: none;    
+    background-color: @green-color;
+  }
+
+  &:last-child
+  {
+    margin-right: 0;
+  }
+
+  &--small
+  {
+    padding: 5px 30px;
+  }
+
+  &--dark
+  {
+    background-color: @dark-color;
+    box-shadow: 0 3px 0 0 @dark-shadow;
+    &:hover
+    {
+      background-color: @lighter-dark-color;
+      box-shadow: 0 3px 0 0 @lighter-dark-shadow;
+    }
+    &:active
+    {
+      box-shadow: none;
+      background-color: @dark-color;
+    }
+  }
+
+  &--carrot
+  {
+    background-color: @carrot-color;
+    box-shadow: 0 3px 0 0 @carrot-shadow;
+    &:hover
+    {
+      background-color: @lighter-carrot-color;
+      box-shadow: 0 3px 0 0 @lighter-carrot-shadow;
+    }
+    &:active
+    {
+      box-shadow: none;
+      background-color: @carrot-color;
+    }
+  }  
+}

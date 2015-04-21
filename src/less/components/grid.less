@@ -1,0 +1,33 @@
+/***************************
+************Grid************
+***************************/
+
+//  Generate columns
+.generate-columns(@n,@i:1) when (@i=<@n)
+{  
+  .col-@{n}-@{i}
+  {
+    width:(@i*100%/@n);       
+  }
+  .generate-columns(@n, (@i+1));
+}
+
+.generate-columns(12);
+
+.container{
+  margin: 0 auto;
+  width: @container-width;
+}
+
+.row [class^=col-]{
+  display: inline-block;
+  vertical-align: top;  
+  padding: 0 18px;
+  font-size: @font-size-base;
+;
+}
+
+.row{  
+  margin:0 -18px;
+  font-size: 0;  
+}
