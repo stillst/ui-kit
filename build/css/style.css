@@ -168,18 +168,20 @@ a:hover {
 /***************************
 ************Images**********
 ***************************/
-.zoom-image {
-  position: relative;
-  overflow: hidden;
-  height: 258px;
+.img-container {
+  max-width: 258px;
+  max-height: 258px;
   border-radius: 5px;
   display: block;
+  overflow: hidden;
+  position: relative;
 }
 .zoom-image .blackout {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: #000;
+  border-radius: 5px;
   opacity: 0;
   left: 0;
   top: 0;
@@ -206,47 +208,31 @@ a:hover {
   opacity: 0.5;
 }
 .zoom-image:hover img {
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
-.tooltip-cover {
-  position: relative;
-  height: 258px;
-  border-radius: 5px;
-  overflow: hidden;
-}
-.tooltip-cover__tooltip {
+.img-container__tooltip {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
   left: 0;
   bottom: -100px;
-  color: #ffffff;
+  color: #fff;
   transition: all 0.5s ease-out;
 }
-.tooltip-cover:hover .tooltip-cover__tooltip {
+.img-container:hover .img-container__tooltip {
   bottom: 0;
 }
 .flip-container {
-  -webkit-perspective: 2000;
-          perspective: 2000;
-}
-.flip-container:hover .flip-container__flipper,
-.flip-container.hover .flip-container__flipper {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-.flip-container__flipper {
   transition: 0.5s;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  transform-style: preserve-3d;
   position: relative;
+}
+.flip-container:hover {
+  transform: rotateY(180deg);
 }
 .flip-container__front,
 .flip-container__back {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
@@ -260,8 +246,7 @@ a:hover {
   width: 258px;
   height: 258px;
   border-radius: 5px;
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 .flip-container__back p {
   margin-top: 95px;
