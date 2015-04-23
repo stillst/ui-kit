@@ -211,7 +211,9 @@ a:hover {
   opacity: 0.5;
 }
 .zoom-image:hover img {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 .img-container__tooltip {
   position: absolute;
@@ -227,15 +229,18 @@ a:hover {
 }
 .flip-container {
   transition: 0.5s;
-  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   position: relative;
 }
 .flip-container:hover {
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 .flip-container__front,
 .flip-container__back {
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
@@ -249,7 +254,8 @@ a:hover {
   width: 258px;
   height: 258px;
   border-radius: 5px;
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 .flip-container__back p {
   margin-top: 95px;
@@ -311,48 +317,13 @@ a:hover {
 /***************************
 *********Checkbox***********
 ***************************/
-.sprite {
-  background-image: url(spritesheet.png);
-  background-repeat: no-repeat;
-  display: block;
-}
-.sprite.sprite-check_ {
-  background-position: -5px -5px;
-  width: 16px;
-  height: 16px;
-}
-.sprite.sprite-ckeck_active {
-  background-position: -31px -5px;
-  width: 16px;
-  height: 16px;
-}
-.sprite.sprite-ckeck_disabled {
-  background-position: -57px -5px;
-  width: 16px;
-  height: 16px;
-}
-.sprite.sprite-radio_ {
-  background-position: -83px -5px;
-  width: 16px;
-  height: 16px;
-}
-.sprite.sprite-radio_active {
-  background-position: -109px -5px;
-  width: 16px;
-  height: 16px;
-}
-.sprite.sprite-radio_disabled {
-  background-position: -135px -5px;
-  width: 16px;
-  height: 16px;
-}
 input[type="checkbox"],
 input[type="radio"] {
   display: none;
 }
 input[type="checkbox"] + label,
 input[type="radio"] + label {
-  font: 18px bold;
+  font: 16px bold;
   color: #444;
   cursor: pointer;
 }
@@ -360,32 +331,46 @@ input[type="checkbox"] + label::before,
 input[type="radio"] + label::before {
   content: "";
   display: inline-block;
-  height: 18px;
-  width: 18px;
+  position: relative;
+  top: 2px;
+  height: 16px;
+  width: 16px;
   margin: 0 5px 0 0;
-  background-image: url(../img/checkbox/1.jpg);
+  background-image: url(../img/checkbox/spritesheet.png);
   background-repeat: no-repeat;
 }
 input[type="checkbox"] + label::before {
-  background-position: -38px -260px;
+  background-position: -5px -5px;
+  width: 16px;
+  height: 16px;
 }
 input[type="radio"] + label::before {
-  background-position: 0px -279px;
+  background-position: -83px -5px;
+  width: 16px;
+  height: 16px;
 }
 input[type="checkbox"]:checked + label::before {
-  background-position: -114px -260px;
+  background-position: -31px -5px;
+  width: 16px;
+  height: 16px;
 }
 input[type="radio"]:checked + label::before {
-  background-position: -108px -279px;
+  background-position: -109px -5px;
+  width: 16px;
+  height: 16px;
 }
 input[type="checkbox"]:disabled + label::before {
-  background-position: -152px -260px;
+  background-position: -57px -5px;
+  width: 16px;
+  height: 16px;
 }
-input[type="checkbox"]:checked:disabled + label::before {
-  background-position: -171px -260px;
+input[type="radio"]:disabled + label::before {
+  background-position: -135px -5px;
+  width: 16px;
+  height: 16px;
 }
-.test {
-  background-position: -144px -279px;
+input[disabled="disabled"] + .label-checkbox--disabled {
+  color: #d8dadc;
 }
 /***************************
 ************Forms***********

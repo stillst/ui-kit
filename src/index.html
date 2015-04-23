@@ -171,42 +171,56 @@
            <div class="row">
                 <div class="col-12-6">                       
                   <div class="label-checkbox">
-                     <label for="radio_one">
-                        
-                     </label>
-                     <input type="radio" id="radio_one" name="z_radio" > Неактивно
+                     
+                    <input type="radio" id="radio_one" name="z_radio" disabled="disabled" > 
+
+                    <label class="label-checkbox--disabled" for="radio_one">
+                        Неактивно
+                    </label>
+                     
                   </div>                                                   
                   <div class="label-checkbox">
+                     
+                      <input type="radio"  id="radio_two" name="z_radio"> 
+
                      <label for="radio_two">
-                        
+                        Активно
                      </label>
-                     <input type="radio"  id="radio_two" name="z_radio"> Активно
+                     
                   </div>
                   <div class="label-checkbox">
-                     <label for="radio_three">
-                        
+                    
+                     <input type="radio" id="radio_three" name="z_radio">
+                    <label for="radio_three">
+                         Отмечено
                      </label>
-                     <input type="radio" id="radio_three" name="z_radio"> Отмечено
+
                   </div> 
                 </div>
                 <div class="col-12-6">        
                   <div class="label-checkbox">
-                     <label>
-                        
+                       
+                      <input disabled="disabled" id="checkbox_one" type="checkbox"> 
+                     <label class="label-checkbox--disabled" for="checkbox_one">
+                        Неактивно
                      </label>
-                     <input type="checkbox"> Неактивно
+                     
                   </div>                                                   
                   <div class="label-checkbox">
-                     <label>
-                       
+                     
+                    <input id="checkbox_two" type="checkbox"> 
+                     <label for="checkbox_two">
+                       Активно
                      </label>
-                      <input type="checkbox"> Активно
+                     
                   </div>
                   <div class="label-checkbox">
-                     <label>
-                        
+                     
+                    <input id="checkbox_three" type="checkbox" >
+                     <label for="checkbox_three">
+                        Отмечено
                      </label>
-                     <input type="checkbox" > Отмечено
+                      
                   </div>   
                 </div>
               </div>
@@ -218,40 +232,6 @@
       
     <section>
           <h1 class="title">Интерактив</h1>   
-
-      <ul>                
-          <li>
-              <input id="cfirst" type="checkbox" name="first" checked hidden />
-              <label for="cfirst">Checked checkbox</label>
-          </li>
-          <li>
-              <input id="csecond" type="checkbox" name="second" hidden />
-              <label for="csecond">Unchecked checkbox</label>
-          </li>
-          <li>
-              <input id="cthird" type="checkbox" name="third" hidden disabled />
-              <label for="cthird">Disabled checkbox</label>
-          </li>
-          <li>
-              <input id="clast" type="checkbox" name="last" checked hidden disabled />
-              <label for="clast">Disabled checked checkbox</label>
-          </li>
-      </ul>
-      <ul>                
-          <li>
-              <input id="rfirst" type="radio" name="radio" checked hidden />
-              <label for="rfirst">Checked radio</label>
-          </li>
-          <li>
-              <input id="rsecond" type="radio" name="radio" hidden />
-              <label for="rsecond">Unchecked radio</label>
-          </li>
-          <li>
-              <input id="rthird" type="radio" name="radio" hidden disabled />
-              <label class="test" for="rthird">Disabled radio</label>
-          </li>
-      </ul>
-
     </section>
 
     <section>
