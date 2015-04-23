@@ -1,0 +1,65 @@
+@import 'bootstrap-tagsinput.less';
+/***************************
+************Forms***********
+***************************/
+form
+{
+	background-color: #fff;
+	padding: 10px;
+	border-radius: 5px;
+
+	input.input--txt 
+	{
+  		border: solid 1px #eaeaea;
+  		border-radius: 5px;
+  		background-color: #fff;
+  		font-family: @font-family-main;
+  		padding: 10px;  
+  		margin: 10px;  		
+  		font-size: @font-size-base;
+		font-weight: normal;   
+		min-width:80%; 
+		outline:none;				
+	}
+
+	.input
+	{
+		position: relative; 
+
+		&.input__sucess
+		{  
+			&:before 
+			{		
+			    font-family: 'FontAwesome';
+			    color:@color-input-sucess;
+			    position: absolute;
+			    left: 75%;
+			    top: 40%;
+			    content: "\f00c";
+			}
+
+			input
+			{
+				border: solid 2px @color-input-sucess;
+			} 			
+		}
+
+		&.input__error
+		{  
+			&:before 
+			{		
+			    font-family: 'FontAwesome';
+			    color:@color-input-error;
+			    position: absolute;
+			    left: 75%;
+			    top: 40%;
+			    content: "\f00d";
+			}
+
+			input
+			{
+				border: solid 2px @color-input-error;
+			}
+		}
+	}
+}

@@ -5,6 +5,8 @@
   <title>Document</title>
   <link rel="stylesheet" href="css/style.css">
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" type='text/css'>
+  
 </head>
 <body>
   <div class="container">
@@ -142,6 +144,32 @@
     </section> 
     <section>
        <h1 class="title">Формы</h1>
+       <div class="row">
+         <div class="col-12-4">
+            <form action="#">
+              <div class="input">
+                <input class="input--txt" type="text" placeholder="Полковнику никто не  пишет"> 
+              </div>
+              <div class="input">
+                <input class="input--txt"  type="text" value="Пишет!">
+              </div>
+              <div class="input input__error">
+                <input class="input--txt" type="text"  value="Но не то">                 
+              </div>             
+              <div class="input input__sucess">
+                <input class="input--txt" type="text" value="А, нет, всё правильно">
+              </div>
+           </form>
+         </div>
+         <div class="col-12-4">
+           <form action="#">            
+              <input class="input--txt" type="text" data-role="tagsinput" value="Быстрее, Выше, Сильнее">             
+           </form>
+         </div>
+         <div class="col-12-3">
+           
+         </div>
+       </div>
     </section> 
       
     <section class="">
@@ -156,5 +184,7 @@
       <h1 class="title">Дополнительно</h1>  
     </section>
   </div>
+  <script src="js/jquery-2.1.3.min.js"></script>
+  <script src="js/bootstrap-tagsinput.min.js"></script>
 </body>
 </html>
