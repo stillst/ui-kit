@@ -1,0 +1,36 @@
+.sprite {
+  background-image: url(spritesheet.png);
+  background-repeat: no-repeat;
+  display: block;
+}
+.sprite.sprite-check_ {
+  background-position: -5px -5px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-ckeck_active {
+  background-position: -31px -5px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-ckeck_disabled {
+  background-position: -57px -5px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-radio_ {
+  background-position: -83px -5px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-radio_active {
+  background-position: -109px -5px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-radio_disabled {
+  background-position: -135px -5px;
+  width: 16px;
+  height: 16px;
+}
+/*# sourceMappingURL=sprites.css.map */
