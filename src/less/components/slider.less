@@ -1,0 +1,52 @@
+.slides_container {
+        width:550px;
+        height:340px;
+        border-radius: 5px; 
+    }
+    .slides_container slides_control {
+          width:550px;      
+          height:340px;      
+          display:block;   
+
+    }  
+
+
+#slides{
+  position: relative;
+}
+
+.pagination{
+  position: absolute;
+  left: 45%;
+  list-style: none;
+  bottom: -9%;
+}
+
+.prev{
+  position: absolute;
+  left: 40%;
+  bottom: -11%;
+}
+
+.next{
+  position: absolute;
+  left: 59%;
+  bottom: -11%;
+}
+
+.pagination li{
+  display: inline-block; 
+  margin: 0 5px;
+}
+
+.pagination li a{
+  font-size: 0;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #ffcabf;
+  background-repeat: no-repeat;
+}
+
+.pagination .current a{
+	background-color: @carrot-color
+}

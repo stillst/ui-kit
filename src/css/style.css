@@ -211,9 +211,7 @@ a:hover {
   opacity: 0.5;
 }
 .zoom-image:hover img {
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 .img-container__tooltip {
   position: absolute;
@@ -229,18 +227,15 @@ a:hover {
 }
 .flip-container {
   transition: 0.5s;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  transform-style: preserve-3d;
   position: relative;
 }
 .flip-container:hover {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 .flip-container__front,
 .flip-container__back {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
@@ -254,8 +249,7 @@ a:hover {
   width: 258px;
   height: 258px;
   border-radius: 5px;
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 .flip-container__back p {
   margin-top: 95px;
@@ -327,8 +321,8 @@ input[type="radio"] + label {
   color: #444;
   cursor: pointer;
 }
-input[type="checkbox"] + label::before,
-input[type="radio"] + label::before {
+.checkbox_type_one + label::before,
+.radio_type_one + label::before {
   content: "";
   display: inline-block;
   position: relative;
@@ -339,35 +333,74 @@ input[type="radio"] + label::before {
   background-image: url(../img/checkbox/spritesheet.png);
   background-repeat: no-repeat;
 }
-input[type="checkbox"] + label::before {
-  background-position: -5px -5px;
-  width: 16px;
-  height: 16px;
-}
-input[type="radio"] + label::before {
-  background-position: -83px -5px;
-  width: 16px;
-  height: 16px;
-}
-input[type="checkbox"]:checked + label::before {
-  background-position: -31px -5px;
-  width: 16px;
-  height: 16px;
-}
-input[type="radio"]:checked + label::before {
-  background-position: -109px -5px;
-  width: 16px;
-  height: 16px;
-}
-input[type="checkbox"]:disabled + label::before {
+.checkbox_type_one:disabled + label::before {
   background-position: -57px -5px;
   width: 16px;
   height: 16px;
 }
-input[type="radio"]:disabled + label::before {
+.checkbox_type_one + label::before {
+  background-position: -5px -5px;
+  width: 16px;
+  height: 16px;
+}
+.checkbox_type_one:checked + label::before {
+  background-position: -31px -5px;
+  width: 16px;
+  height: 16px;
+}
+.radio_type_one:disabled + label::before {
   background-position: -135px -5px;
   width: 16px;
   height: 16px;
+}
+.radio_type_one:checked + label::before {
+  background-position: -109px -5px;
+  width: 16px;
+  height: 16px;
+}
+.radio_type_one + label::before {
+  background-position: -83px -5px;
+  width: 16px;
+  height: 16px;
+}
+.checkbox_type_two + label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 5px;
+  height: 16px;
+  width: 30px;
+  left: 0;
+  border-radius: 10px;
+  margin: 0 5px 0 0;
+  background-color: #eaeaea;
+  background-repeat: no-repeat;
+}
+.checkbox_type_two + label::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 5px;
+  height: 14px;
+  width: 14px;
+  left: 0;
+  border-radius: 10px;
+  margin: 0 5px 0 0;
+  border: 1px solid #eaeaea;
+  background-color: #fff;
+  background-repeat: no-repeat;
+}
+.checkbox_type_two:checked + label::before {
+  background-color: #a0d468;
+}
+.checkbox_type_two:checked + label::after {
+  left: 14px;
+}
+.checkbox_type_two + label {
+  margin-left: 35px;
+}
+.checkbox_type_two:disabled + label::after {
+  background-color: #f8f8f8;
 }
 input[disabled="disabled"] + .label-checkbox--disabled {
   color: #d8dadc;
@@ -420,4 +453,48 @@ form .input.input__error input {
 form .label-checkbox {
   display: block;
   padding: 5px;
+  position: relative;
+}
+.slides_container {
+  width: 550px;
+  height: 340px;
+  border-radius: 5px;
+}
+.slides_container slides_control {
+  width: 550px;
+  height: 340px;
+  display: block;
+}
+#slides {
+  position: relative;
+}
+.pagination {
+  position: absolute;
+  left: 45%;
+  list-style: none;
+  bottom: -9%;
+}
+.prev {
+  position: absolute;
+  left: 40%;
+  bottom: -11%;
+}
+.next {
+  position: absolute;
+  left: 59%;
+  bottom: -11%;
+}
+.pagination li {
+  display: inline-block;
+  margin: 0 5px;
+}
+.pagination li a {
+  font-size: 0;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #ffcabf;
+  background-repeat: no-repeat;
+}
+.pagination .current a {
+  background-color: #fc6e51;
 }

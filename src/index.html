@@ -9,6 +9,9 @@
   
 </head>
 <body>
+
+
+
   <div class="container">
     <section>
       <h1 class="title title--first">Сетка</h1>
@@ -172,7 +175,7 @@
                 <div class="col-12-6">                       
                   <div class="label-checkbox">
                      
-                    <input type="radio" id="radio_one" name="z_radio" disabled="disabled" > 
+                    <input class="radio_type_one" type="radio" id="radio_one" name="z_radio" disabled="disabled" > 
 
                     <label class="label-checkbox--disabled" for="radio_one">
                         Неактивно
@@ -181,7 +184,7 @@
                   </div>                                                   
                   <div class="label-checkbox">
                      
-                      <input type="radio"  id="radio_two" name="z_radio"> 
+                      <input class="radio_type_one" type="radio"  id="radio_two" name="z_radio"> 
 
                      <label for="radio_two">
                         Активно
@@ -190,7 +193,7 @@
                   </div>
                   <div class="label-checkbox">
                     
-                     <input type="radio" id="radio_three" name="z_radio">
+                     <input class="radio_type_one" type="radio" id="radio_three" name="z_radio">
                     <label for="radio_three">
                          Отмечено
                      </label>
@@ -200,7 +203,7 @@
                 <div class="col-12-6">        
                   <div class="label-checkbox">
                        
-                      <input disabled="disabled" id="checkbox_one" type="checkbox"> 
+                      <input class="checkbox_type_one" disabled="disabled" id="checkbox_one" type="checkbox"> 
                      <label class="label-checkbox--disabled" for="checkbox_one">
                         Неактивно
                      </label>
@@ -208,7 +211,7 @@
                   </div>                                                   
                   <div class="label-checkbox">
                      
-                    <input id="checkbox_two" type="checkbox"> 
+                    <input class="checkbox_type_one" id="checkbox_two" type="checkbox"> 
                      <label for="checkbox_two">
                        Активно
                      </label>
@@ -216,15 +219,40 @@
                   </div>
                   <div class="label-checkbox">
                      
-                    <input id="checkbox_three" type="checkbox" >
+                    <input class="checkbox_type_one" id="checkbox_three" type="checkbox" >
                      <label for="checkbox_three">
                         Отмечено
                      </label>
                       
                   </div>   
                 </div>
+           </div>
+          <div class="row">
+            <div class="col-12-7">
+              <div class="label-checkbox">
+                 <input class="checkbox_type_two" id="switch_one" type="checkbox" disabled="disabled"> 
+                 <label for="switch_one" class="label-checkbox--disabled">
+                       Неактивно
+                 </label>
               </div>
 
+              <div class="label-checkbox">
+                 <input class="checkbox_type_two" id="switch_two" type="checkbox"> 
+                 <label for="switch_two">
+                       Выключено
+                 </label>
+              </div>
+
+              <div class="label-checkbox">
+                 <input class="checkbox_type_two" id="switch_three" type="checkbox"> 
+                 <label for="switch_three">
+                       Включено
+                 </label>
+              </div>
+
+
+            </div>
+          </div>
           </form>                   
          </div>
        </div>
@@ -232,17 +260,50 @@
       
     <section>
           <h1 class="title">Интерактив</h1>   
+            <div class="row">
+              <div class="col-12-6">
+                <div id="slides">
+                  <div class="slides_container">
+                        <a href=""><img src="img/slider/Gravity.jpg">       
+                        <a href=""><img src="img/slider/example-slide-1.jpg"></a>
+                        <a href=""><img src="img/slider/example-slide-2.jpg"></a>
+                  </div>  
+                  <a href="#" class="prev"><i class="fa fa-chevron-left"></i></a>
+                  <a href="#" class="next"><i class="fa fa-chevron-right"></i></a>                  
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-12-6">
+                
+            </div>            
     </section>
 
     <section>
       <h1 class="title">Продвинутые формы</h1>  
     </section>
   
-    <section>
-      <h1 class="title">Дополнительно</h1>  
-    </section>
   </div>
-  <script src="js/jquery-2.1.3.min.js"></script>
-  <script src="js/bootstrap-tagsinput.min.js"></script>
+  <script src="js/jquery-2.1.3.min.js"></script>  
+  <script src="js/bootstrap-tagsinput.min.js"></script>  
+  <script src="js/slides.js"></script>
+  <script>
+
+    $( document ).ready(function() 
+    {
+       $(function(){
+          $("#slides").slides({
+            
+            play: 3000,
+            pause: 2500,
+            hoverPause: true    
+          });
+        });
+    });
+
+   
+
+    
+  </script>
 </body>
 </html>

@@ -19,8 +19,8 @@ input[type="radio"] + label {
   color: #444;
   cursor: pointer;
 }
-input[type="checkbox"] + label::before,
-input[type="radio"] + label::before {
+.checkbox_type_one + label::before,
+.radio_type_one + label::before {
     content: "";
     display: inline-block;
     position: relative;
@@ -31,24 +31,73 @@ input[type="radio"] + label::before {
     background-image: url(../img/checkbox/spritesheet.png);
     background-repeat: no-repeat;
 }
-input[type="checkbox"] + label::before {
-    .stitches-sprite(-5px, -5px, 16px, 16px);  
-}
-input[type="radio"] + label::before {
-      .stitches-sprite(-83px, -5px, 16px, 16px);
-}
-input[type="checkbox"]:checked + label::before {
-     .stitches-sprite(-31px, -5px, 16px, 16px);
-}
-input[type="radio"]:checked + label::before {
-     .stitches-sprite(-109px, -5px, 16px, 16px);
-}
-input[type="checkbox"]:disabled + label::before {
+
+.checkbox_type_one:disabled+ label::before {
     .stitches-sprite(-57px, -5px, 16px, 16px);
 }
 
-input[type="radio"]:disabled + label::before {
+.checkbox_type_one + label::before {
+    .stitches-sprite(-5px, -5px, 16px, 16px);  
+}
+
+.checkbox_type_one:checked + label::before {
+     .stitches-sprite(-31px, -5px, 16px, 16px);
+}
+
+.radio_type_one:disabled + label::before {
      .stitches-sprite(-135px, -5px, 16px, 16px);
+}
+
+.radio_type_one:checked + label::before {
+     .stitches-sprite(-109px, -5px, 16px, 16px);
+}
+.radio_type_one + label::before {
+      .stitches-sprite(-83px, -5px, 16px, 16px);
+}
+
+.checkbox_type_two + label::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    height: 16px;
+    width: 30px;
+    left: 0;
+    border-radius: 10px;
+    margin: 0 5px 0 0;
+    background-color: #eaeaea;
+    background-repeat: no-repeat;
+}
+
+.checkbox_type_two + label::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 5px;
+  height: 14px;
+  width: 14px;
+  left: 0;
+  border-radius: 10px;
+  margin: 0 5px 0 0;
+  border: 1px solid #eaeaea;
+  background-color: #fff;
+  background-repeat: no-repeat;
+}
+
+.checkbox_type_two:checked + label::before {    
+    background-color: @green-color;   
+}
+
+.checkbox_type_two:checked + label::after {  
+  left: 14px;  
+}
+
+.checkbox_type_two +label{
+  margin-left: 35px;
+}
+
+.checkbox_type_two:disabled + label::after {
+     background-color: #f8f8f8;
 }
 
 input[disabled="disabled"] + .label-checkbox--disabled{
