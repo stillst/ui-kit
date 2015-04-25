@@ -72,7 +72,8 @@
 .int_background {
   background-color: #fff;
   min-height: 120px;
-  padding: 10% 12%;
+  padding: 20px 30px;
+  margin-bottom: 30px;
 }
 .js-message_link {
   color: #e86060;
@@ -239,7 +240,9 @@ a:hover {
   opacity: 0.5;
 }
 .zoom-image:hover img {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 .img-container__tooltip {
   position: absolute;
@@ -255,15 +258,18 @@ a:hover {
 }
 .flip-container {
   transition: 0.5s;
-  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   position: relative;
 }
 .flip-container:hover {
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 .flip-container__front,
 .flip-container__back {
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
@@ -277,7 +283,8 @@ a:hover {
   width: 258px;
   height: 258px;
   border-radius: 5px;
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 .flip-container__back p {
   margin-top: 95px;
@@ -528,4 +535,36 @@ form .label-checkbox {
 }
 .pagination .current a {
   background-color: #fc6e51;
+}
+.tab_input,
+.tab_article {
+  display: none;
+}
+input:nth-of-type(1):checked ~ article:nth-of-type(1) {
+  display: block;
+}
+input:nth-of-type(2):checked ~ article:nth-of-type(2) {
+  display: block;
+}
+input:nth-of-type(3):checked ~ article:nth-of-type(3) {
+  display: block;
+}
+input:nth-of-type(4):checked ~ article:nth-of-type(4) {
+  display: block;
+}
+.tab_input + label {
+  padding: 5px 30px;
+  border: 1px solid #d8dadc;
+  border-radius: 4px 4px 0 0;
+  color: #000;
+  margin-bottom: 20px;
+}
+.tab_input:checked + label {
+  background: #fc6e51;
+  border: none;
+  color: #fff;
+  border-bottom: 1px solid #d8dadc;
+}
+.tab_article {
+  margin-top: 20px;
 }
