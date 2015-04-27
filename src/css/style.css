@@ -255,52 +255,6 @@ a:hover {
   margin-top: 95px;
   text-align: center;
 }
-/*
-.flip-container
-{
-  
-  &:hover &__flipper, 
-  {
-    transform: rotateY(180deg);
-  }
-  
-  &__flipper
-  {
-    transition: 0.5s;
-    transform-style: preserve-3d;
-    position: relative;
-  }
-  
-  &__front, &__back
-  {
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
-  &__front
-  {
-    z-index: 2;
-  }
-  
-  &__back
-  {
-    background-color: #fff;
-    border: 1px solid #cacaca;
-    width: 258px;
-    height: 258px;
-    border-radius: 5px;
-    transform: rotateY(180deg);
-    
-    & p
-    {
-      margin-top: 95px;
-      text-align: center;
-    }
-  }
-}
-*/
 /***************************
 ***BOOTSTRAP-TAGSINPUT******
 ***************************/
@@ -357,12 +311,18 @@ a:hover {
 /***************************
 *********Checkbox***********
 ***************************/
+.label-checkbox {
+  display: block;
+  padding: 5px;
+  position: relative;
+}
 input[type="checkbox"],
 input[type="radio"] {
   display: none;
 }
-input[type="checkbox"] + label,
-input[type="radio"] + label {
+.checkbox_type_one + label,
+.radio_type_one + label,
+.checkbox_type_two + label {
   font: 16px bold;
   color: #444;
   cursor: pointer;
@@ -452,6 +412,33 @@ input[disabled="disabled"] + .label-checkbox--disabled {
   color: #d8dadc;
 }
 /***************************
+*********Checkbox_adv*******
+***************************/
+.radio_advance {
+  border: 2px solid #fc6e51;
+  border-radius: 4px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+}
+.radio_advance--input:checked + label {
+  background-color: #fc6e51;
+  color: #fff;
+}
+.radio_advance--input + label {
+  background-color: #fff ;
+  color: #fc6e51;
+}
+.radio_advance--label {
+  background-color: #fff;
+  padding: 7px;
+  color: #fc6e51;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  cursor: pointer;
+}
+/***************************
 ************Forms***********
 ***************************/
 form {
@@ -495,11 +482,6 @@ form .input.input__error:before {
 }
 form .input.input__error input {
   border: solid 2px #f2adad;
-}
-form .label-checkbox {
-  display: block;
-  padding: 5px;
-  position: relative;
 }
 /***************************
 ************Slider**********
@@ -620,4 +602,3 @@ form .label-checkbox {
   border: 10px solid transparent;
   border-bottom: 10px solid #fc6e51;
 }
-/*# sourceMappingURL=style.css.map */
