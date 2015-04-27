@@ -69,35 +69,6 @@
 .margin_bottom {
   margin-bottom: 20px;
 }
-.int_background {
-  background-color: #fff;
-  min-height: 120px;
-  padding: 20px 30px;
-  margin-bottom: 30px;
-}
-.js-message_link {
-  color: #e86060;
-  text-decoration: none;
-}
-.js-popup {
-  padding: 3px;
-  color: #fff;
-  border-radius: 5px;
-  font-size: 13px;
-  margin-top: 15px;
-  background-color: #fc6e51;
-  position: relative;
-  cursor: pointer;
-}
-/*triangle*/
-.js-popup::before {
-  content: '';
-  position: absolute;
-  left: 45%;
-  top: -20px;
-  border: 10px solid transparent;
-  border-bottom: 10px solid #fc6e51;
-}
 /***************************
 ********Typography**********
 ***************************/
@@ -240,9 +211,7 @@ a:hover {
   opacity: 0.5;
 }
 .zoom-image:hover img {
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 .img-container__tooltip {
   position: absolute;
@@ -258,18 +227,15 @@ a:hover {
 }
 .flip-container {
   transition: 0.5s;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  transform-style: preserve-3d;
   position: relative;
 }
 .flip-container:hover {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 .flip-container__front,
 .flip-container__back {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
@@ -283,13 +249,58 @@ a:hover {
   width: 258px;
   height: 258px;
   border-radius: 5px;
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 .flip-container__back p {
   margin-top: 95px;
   text-align: center;
 }
+/*
+.flip-container
+{
+  
+  &:hover &__flipper, 
+  {
+    transform: rotateY(180deg);
+  }
+  
+  &__flipper
+  {
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+  
+  &__front, &__back
+  {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  &__front
+  {
+    z-index: 2;
+  }
+  
+  &__back
+  {
+    background-color: #fff;
+    border: 1px solid #cacaca;
+    width: 258px;
+    height: 258px;
+    border-radius: 5px;
+    transform: rotateY(180deg);
+    
+    & p
+    {
+      margin-top: 95px;
+      text-align: center;
+    }
+  }
+}
+*/
 /***************************
 ***BOOTSTRAP-TAGSINPUT******
 ***************************/
@@ -498,7 +509,7 @@ form .label-checkbox {
   height: 340px;
   border-radius: 5px;
 }
-.slides_container slides_control {
+.slides_container .slides_control {
   width: 550px;
   height: 340px;
   display: block;
@@ -510,17 +521,7 @@ form .label-checkbox {
   position: absolute;
   left: 45%;
   list-style: none;
-  bottom: -9%;
-}
-.prev {
-  position: absolute;
-  left: 40%;
-  bottom: -11%;
-}
-.next {
-  position: absolute;
-  left: 59%;
-  bottom: -11%;
+  bottom: -30px;
 }
 .pagination li {
   display: inline-block;
@@ -533,38 +534,90 @@ form .label-checkbox {
   background-color: #ffcabf;
   background-repeat: no-repeat;
 }
+.prev {
+  position: absolute;
+  left: 40%;
+  bottom: -36px;
+}
+.next {
+  position: absolute;
+  left: 59%;
+  bottom: -36px;
+}
 .pagination .current a {
   background-color: #fc6e51;
 }
-.tab_input,
-.tab_article {
-  display: none;
-}
-input:nth-of-type(1):checked ~ article:nth-of-type(1) {
-  display: block;
-}
-input:nth-of-type(2):checked ~ article:nth-of-type(2) {
-  display: block;
-}
-input:nth-of-type(3):checked ~ article:nth-of-type(3) {
-  display: block;
-}
-input:nth-of-type(4):checked ~ article:nth-of-type(4) {
-  display: block;
-}
-.tab_input + label {
-  padding: 5px 30px;
-  border: 1px solid #d8dadc;
-  border-radius: 4px 4px 0 0;
-  color: #000;
+/***************************
+************TABS************
+***************************/
+.tabs--menu {
+  display: inline-block;
+  vertical-align: middle;
+  list-style: none;
+  border-bottom: 1px solid #d8dadc;
   margin-bottom: 20px;
 }
-.tab_input:checked + label {
+.tabs--menu .tabs--menu-item {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 5px 30px;
+  border: 1px solid #d8dadc;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  color: #000;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.tabs--menu .tabs--menu-item:nth-last-of-type(1) {
+  margin-right: 0;
+}
+.tabs--menu .tabs--menu-item__active {
   background: #fc6e51;
   border: none;
   color: #fff;
-  border-bottom: 1px solid #d8dadc;
+  border-bottom: 1px solid #fc6e51;
 }
-.tab_article {
-  margin-top: 20px;
+.tabs--article {
+  display: none;
+  list-style: none;
 }
+.tabs--article__active {
+  display: block;
+}
+/***************************
+*********Interactive********
+***************************/
+.int_background {
+  background-color: #fff;
+  min-height: 120px;
+  padding: 20px 30px;
+  margin-bottom: 30px;
+}
+.js-message_link {
+  color: #e86060;
+  text-decoration: none;
+}
+.js-message_link:hover ~ .js-popup {
+  display: block;
+}
+.js-popup {
+  padding: 3px 3px 3px 15px;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 13px;
+  margin-top: 15px;
+  background-color: #fc6e51;
+  position: relative;
+  cursor: pointer;
+  display: none;
+  /*triangle*/
+}
+.js-popup::before {
+  content: '';
+  position: absolute;
+  left: 45%;
+  top: -20px;
+  border: 10px solid transparent;
+  border-bottom: 10px solid #fc6e51;
+}
+/*# sourceMappingURL=style.css.map */

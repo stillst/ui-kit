@@ -1,99 +1,60 @@
 /***************************
 ************Slider**********
 ***************************/
-.slides_container {
-        width:550px;
-        height:340px;
-        border-radius: 5px; 
-    }
-    .slides_container slides_control {
-	    width:550px;      
-	    height:340px;      
-	    display:block;   
-    }  
+.slides_container 
+{
+  width:550px;
+  height:340px;
+  border-radius: 5px; 
 
-
-#slides{
+  .slides_control 
+  {
+    width:550px;      
+    height:340px;      
+    display:block;   
+  }  
+}
+   
+#slides
+{
   position: relative;
 }
 
-.pagination{
+.pagination
+{
   position: absolute;
   left: 45%;
   list-style: none;
-  bottom: -9%;
+  bottom: -30px;
+
+  & li
+  {
+    display: inline-block; 
+    margin: 0 5px;
+
+  & a
+  {
+    font-size: 0;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #ffcabf;
+    background-repeat: no-repeat;
+   }
+  }
 }
 
 .prev{
   position: absolute;
   left: 40%;
-  bottom: -11%;
+  bottom: -36px;
 }
 
 .next{
   position: absolute;
   left: 59%;
-  bottom: -11%;
-}
-
-.pagination li{
-  display: inline-block; 
-  margin: 0 5px;
-}
-
-.pagination li a{
-  font-size: 0;
-  padding: 5px;
-  border-radius: 10px;
-  background-color: #ffcabf;
-  background-repeat: no-repeat;
+  bottom: -36px;
 }
 
 .pagination .current a{
 	background-color: @carrot-color
 }
-
-
-.tab_input, .tab_article {
-    display: none;
-}
-           
-input:nth-of-type(1):checked ~ article:nth-of-type(1) {
-    display: block;
-}
-
-input:nth-of-type(2):checked ~ article:nth-of-type(2) {
-    display: block;
-}
-
-input:nth-of-type(3):checked ~ article:nth-of-type(3) {
-    display: block;
-}
-
-input:nth-of-type(4):checked ~ article:nth-of-type(4) {
-    display: block;
-}
-
-
-
-
-.tab_input + label{  
-  padding: 5px 30px;
-  border: 1px solid @grey-line;
-  border-radius: 4px 4px 0 0;
-  color:#000;
-  margin-bottom: 20px;
-}
-
-
-.tab_input:checked + label{
-  background:  @carrot-color;
-  border: none;
-  color:#fff;
-  border-bottom: 1px solid @grey-line;  
-}
-
-.tab_article{
-  margin-top: 20px;
-}
-
