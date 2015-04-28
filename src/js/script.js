@@ -13,6 +13,41 @@ $( document ).ready(function()
 
    $(function()
    {
+      
+      $(".rangeslider").noUiSlider({
+        start:[1200,9500],
+        step:100,
+        connect:!0,
+        range:{min:0,max:15000},
+        format:wNumb({decimals:0,postfix:"Р"})
+      });
+
+      $(".rangeslider").Link("lower").to('-inline-<div class="rangeslider-tooltip"></div>',
+        function(a)
+        {
+           $(this).html("<span>"+a+"</span>")
+        });
+
+      $(".rangeslider").Link("upper").to('-inline-<div class="rangeslider-tooltip"></div>',
+         function(a){
+          $(this).html("<span>"+a+"</span>")
+         });
+
+
+       $(".percentslider").noUiSlider({
+        start:0,
+        step:1,     
+        range:{min:0,max:100},
+        format:wNumb({decimals:0,postfix:"%"})
+      });
+
+        $(".percentslider").Link("lower").to('-inline-<div class="percentslider-tooltip"></div>',
+        function(a)
+        {
+           $(this).html("<span>"+a+"</span>")
+        });
+
+     
     /*
       $("#three-step-slider").noUiSlider({
         range: {
