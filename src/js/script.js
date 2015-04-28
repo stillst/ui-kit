@@ -13,6 +13,7 @@ $( document ).ready(function()
 
    $(function()
    {
+    /*
       $("#three-step-slider").noUiSlider({
         range: {
             'min': 0,            
@@ -22,26 +23,101 @@ $( document ).ready(function()
         snap: true,
         start: [0]
       });
+*/
+      //$(".epick-slider-steps--pill__active").draggable({ grid: [100,50] });
 
       $(document).on('click', '.epick-slider-steps--pill__start', function()
-      {                 
-        $(".epick-slider-steps--pill__half").css('background-color','#e6e9ed');
-        $(".epick-slider-steps--pill__finish").css('background-color','#e6e9ed');                
-        $(".noUi-origin").css('left','0'); 
+      { 
+        $(".epick-slider-steps--pill__half").css('background-color','#e6e9ed');                      
+        $(".epick-slider-steps--pill__finish").css('background-color','#e6e9ed'); 
+        $(".epick-slider-steps--range__start").css('background-color','#e6e9ed');
+        $(".epick-slider-steps--range__finish").css('background-color','#e6e9ed');                
+        $(".epick-slider-steps--pill__active").css('left','20px'); 
       });
 
       $(document).on('click', '.epick-slider-steps--pill__half', function()
       {   
-        $(".epick-slider-steps--pill__half").css('background-color','#fc6e51');
-        $(".epick-slider-steps--pill__finish").css('background-color','#e6e9ed');              
-         $(".noUi-origin").css('left','50'); 
+        $(".epick-slider-steps--pill__half").css('background-color','#fc6e51');                      
+        $(".epick-slider-steps--pill__finish").css('background-color','#e6e9ed');
+        $(".epick-slider-steps--range__start").css('background-color','#fc6e51');
+        $(".epick-slider-steps--range__finish").css('background-color','#e6e9ed');              
+        $(".epick-slider-steps--pill__active").css('left','255px');  
       });
 
       $(document).on('click', '.epick-slider-steps--pill__finish', function()
       {   
-        $(".epick-slider-steps--pill__half").css('background-color','#fc6e51');
-        $(".epick-slider-steps--pill__finish").css('background-color','#fc6e51');              
-         $(".noUi-origin").css('left','100'); 
+
+        $(".epick-slider-steps--pill__half").css('background-color','#fc6e51');                      
+        $(".epick-slider-steps--pill__finish").css('background-color','#fc6e51');
+        $(".epick-slider-steps--range__start").css('background-color','#fc6e51');
+        $(".epick-slider-steps--range__finish").css('background-color','#fc6e51');              
+        $(".epick-slider-steps--pill__active").css('left','487px'); 
+      });
+
+
+      $(document).on('click', '.epick-slider-steps--range__start', function()
+      { 
+
+        var margin_left = $('.epick-slider-steps--pill__active').css('left');
+        console.log(margin_left); 
+        if (margin_left == '20px')
+        {
+            $(".epick-slider-steps--pill__half").css('background-color','#fc6e51');                      
+            $(".epick-slider-steps--pill__finish").css('background-color','#e6e9ed');
+            $(".epick-slider-steps--range__start").css('background-color','#fc6e51');
+            $(".epick-slider-steps--range__finish").css('background-color','#e6e9ed');              
+            $(".epick-slider-steps--pill__active").css('left','255px');  
+        }
+        else if (margin_left == '255px')
+        {
+          $(".epick-slider-steps--pill__half").css('background-color','#e6e9ed');                      
+          $(".epick-slider-steps--pill__finish").css('background-color','#e6e9ed'); 
+          $(".epick-slider-steps--range__start").css('background-color','#e6e9ed');
+          $(".epick-slider-steps--range__finish").css('background-color','#e6e9ed');                
+          $(".epick-slider-steps--pill__active").css('left','20px'); 
+        }
+
+        else if (margin_left == '487px')
+        {
+          $(".epick-slider-steps--pill__half").css('background-color','#fc6e51');                      
+          $(".epick-slider-steps--pill__finish").css('background-color','#e6e9ed');
+          $(".epick-slider-steps--range__start").css('background-color','#fc6e51');
+          $(".epick-slider-steps--range__finish").css('background-color','#e6e9ed');              
+          $(".epick-slider-steps--pill__active").css('left','255px');
+        }       
+      });
+
+
+      $(document).on('click', '.epick-slider-steps--range__finish', function()
+      { 
+
+        var margin_left = $('.epick-slider-steps--pill__active').css('left');
+        console.log(margin_left); 
+        if (margin_left == '20px')
+        {
+            $(".epick-slider-steps--pill__half").css('background-color','#fc6e51');                      
+            $(".epick-slider-steps--pill__finish").css('background-color','#e6e9ed');
+            $(".epick-slider-steps--range__start").css('background-color','#fc6e51');
+            $(".epick-slider-steps--range__finish").css('background-color','#e6e9ed');              
+            $(".epick-slider-steps--pill__active").css('left','255px');  
+        }
+        else if (margin_left == '255px')
+        {
+          $(".epick-slider-steps--pill__half").css('background-color','#fc6e51');                      
+          $(".epick-slider-steps--pill__finish").css('background-color','#fc6e51');
+          $(".epick-slider-steps--range__start").css('background-color','#fc6e51');
+          $(".epick-slider-steps--range__finish").css('background-color','#fc6e51');              
+          $(".epick-slider-steps--pill__active").css('left','487px'); 
+        }
+
+        else if (margin_left == '487px')
+        {
+          $(".epick-slider-steps--pill__half").css('background-color','#fc6e51');                      
+          $(".epick-slider-steps--pill__finish").css('background-color','#e6e9ed');
+          $(".epick-slider-steps--range__start").css('background-color','#fc6e51');
+          $(".epick-slider-steps--range__finish").css('background-color','#e6e9ed');              
+          $(".epick-slider-steps--pill__active").css('left','255px');
+        }       
       });
 
     });
