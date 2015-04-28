@@ -8,7 +8,45 @@ $( document ).ready(function()
         pause: 2500,
         hoverPause: true    
       });
+   });
+
+
+   $(function()
+   {
+      $("#three-step-slider").noUiSlider({
+        range: {
+            'min': 0,            
+            '50%': 50,            
+            'max': 100
+        },
+        snap: true,
+        start: [0]
+      });
+
+      $(document).on('click', '.epick-slider-steps--pill__start', function()
+      {                 
+        $(".epick-slider-steps--pill__half").css('background-color','#e6e9ed');
+        $(".epick-slider-steps--pill__finish").css('background-color','#e6e9ed');                
+        $(".noUi-origin").css('left','0'); 
+      });
+
+      $(document).on('click', '.epick-slider-steps--pill__half', function()
+      {   
+        $(".epick-slider-steps--pill__half").css('background-color','#fc6e51');
+        $(".epick-slider-steps--pill__finish").css('background-color','#e6e9ed');              
+         $(".noUi-origin").css('left','50'); 
+      });
+
+      $(document).on('click', '.epick-slider-steps--pill__finish', function()
+      {   
+        $(".epick-slider-steps--pill__half").css('background-color','#fc6e51');
+        $(".epick-slider-steps--pill__finish").css('background-color','#fc6e51');              
+         $(".noUi-origin").css('left','100'); 
+      });
+
     });
+
+
    //tabs 
    $(function()
    {
