@@ -1,8 +1,6 @@
 /***************************
 ************Grid************
 ***************************/
-
-//  Generate columns
 .generate-columns(@n,@i:1) when (@i=<@n)
 {  
   .col-@{n}-@{i}
@@ -14,25 +12,33 @@
 
 .generate-columns(12);
 
-.col-12-3.5 {
+.col-12-3.5 
+{
   width: 30 %;
 }
 
-
-.container{
+.container
+{
   margin: 0 auto;
   width: @container-width;
 }
 
-.row [class^=col-]{
+.row [class^=col-]
+{
   display: inline-block;
   vertical-align: top;  
-  padding: 0 18px;
+  padding: 0 @container-margin;
   font-size: @font-size-base;
-;
 }
 
-.row{  
-  margin:0 -18px;
+.row
+{  
+  margin:0 @container-margin*-1;
   font-size: 0;  
+}
+
+.grid--element
+{
+  background-color: @grid-color;
+  min-height: 34px; 
 }

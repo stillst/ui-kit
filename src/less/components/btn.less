@@ -3,13 +3,14 @@
 ***************************/
 .btn
 {
-  position: relative;
   cursor: pointer;
+  position: relative;
   color: #fff;
   padding: 10px 40px;
   border-radius: 4px;
   border: none;
   margin-right: 20px;
+  margin-bottom: 20px;
   outline: none;
   background-color: @green-color;
   box-shadow: 0 3px 0 0 @green-shadow;
@@ -41,11 +42,13 @@
   {
     background-color: @dark-color;
     box-shadow: 0 3px 0 0 @dark-shadow;
+
     &:hover
     {
       background-color: @lighter-dark-color;
       box-shadow: 0 3px 0 0 @lighter-dark-shadow;
     }
+
     &:active
     {
       box-shadow: none;
@@ -57,11 +60,13 @@
   {
     background-color: @carrot-color;
     box-shadow: 0 3px 0 0 @carrot-shadow;
+    
     &:hover
     {
       background-color: @lighter-carrot-color;
       box-shadow: 0 3px 0 0 @lighter-carrot-shadow;
     }
+
     &:active
     {
       box-shadow: none;

@@ -23,7 +23,7 @@
 .zoom-image:after {
   content: '';
   position: absolute;
-  background-image: url(../img/icon-zoom-plus.png);
+  background-image: url(../img/img_area/icon-zoom-plus.png);
   background-size: 100%;
   height: 36px;
   width: 35px;
@@ -85,50 +85,4 @@
   margin-top: 95px;
   text-align: center;
 }
-/*
-.flip-container
-{
-  
-  &:hover &__flipper, 
-  {
-    transform: rotateY(180deg);
-  }
-  
-  &__flipper
-  {
-    transition: 0.5s;
-    transform-style: preserve-3d;
-    position: relative;
-  }
-  
-  &__front, &__back
-  {
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
-  &__front
-  {
-    z-index: 2;
-  }
-  
-  &__back
-  {
-    background-color: #fff;
-    border: 1px solid #cacaca;
-    width: 258px;
-    height: 258px;
-    border-radius: 5px;
-    transform: rotateY(180deg);
-    
-    & p
-    {
-      margin-top: 95px;
-      text-align: center;
-    }
-  }
-}
-*/
 /*# sourceMappingURL=images.css.map */

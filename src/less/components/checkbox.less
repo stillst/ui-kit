@@ -74,7 +74,7 @@ input[type="radio"] {
     left: 0;
     border-radius: 10px;
     margin: 0 5px 0 0;
-    background-color: #eaeaea;
+    background-color: @grey-checkbox;
     background-repeat: no-repeat;
 }
 
@@ -88,7 +88,7 @@ input[type="radio"] {
   left: 0;
   border-radius: 10px;
   margin: 0 5px 0 0;
-  border: 1px solid #eaeaea;
+  border: 1px solid @grey-checkbox;
   background-color: #fff;
   background-repeat: no-repeat;
 }
@@ -106,16 +106,17 @@ input[type="radio"] {
 }
 
 .checkbox_type_two:disabled + label::after {
-     background-color: #f8f8f8;
+     background-color: @grey-disabled;
 }
 
 input[disabled="disabled"] + .label-checkbox--disabled{
-    color:@grey-line;
+    color:@grey-checkbox;
 }
 
-/***************************
-*********Checkbox_adv*******
-***************************/
+
+
+
+/*Checkbox_adv*/
 .radio_advance
 {
   border: 2px solid @carrot-color;
