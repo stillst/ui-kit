@@ -10,7 +10,12 @@ $( document ).ready(function()
       });
    });
 
+   function timestamp(str)
+   {
+     return new Date(str).getTime();   
+   }
 
+   
    $(function()
    {
       
@@ -34,31 +39,7 @@ $( document ).ready(function()
          });
 
 
-       $(".percentslider").noUiSlider({
-        start:0,
-        step:1,     
-        range:{min:0,max:100},
-        format:wNumb({decimals:0,postfix:"%"})
-      });
-
-        $(".percentslider").Link("lower").to('-inline-<div class="percentslider-tooltip"></div>',
-        function(a)
-        {
-           $(this).html("<span>"+a+"</span>")
-        });
-
-     
-    /*
-      $("#three-step-slider").noUiSlider({
-        range: {
-            'min': 0,            
-            '50%': 50,            
-            'max': 100
-        },
-        snap: true,
-        start: [0]
-      });
-*/
+      
       //$(".epick-slider-steps--pill__active").draggable({ grid: [100,50] });
 
       $(document).on('click', '.epick-slider-steps--pill__start', function()

@@ -711,3 +711,43 @@ form .input.input__error input {
 .percentslider.noUi-target {
   border: none;
 }
+/***************************
+*******Progress bar*********
+***************************/
+.pbar .ui-progressbar-value {
+  display: block !important;
+}
+.progress-bar .ui-progressbar {
+  height: 10px;
+  background: #e6e9ed;
+}
+.progress-bar .ui-widget-header {
+  border: none;
+  background: #fc6e51;
+}
+.progress-bar .ui-progressbar-value {
+  margin: 0px;
+  height: 100%;
+  border-radius: 10px;
+}
+.progress-bar .ui-widget-content {
+  border: none;
+  background: #eeeeee ;
+}
+.progress-bar .percent {
+  text-align: center;
+  color: #bfbfbf;
+}
+.progress-bar .elapsed {
+  color: #aab2bd;
+  float: right;
+  font-size: 11px;
+}
+.progress-bar .progress-time {
+  color: #aab2bd;
+  float: left;
+  font-size: 11px;
+}
+.progress-bar .progress-bar--time {
+  overflow: hidden;
+}
