@@ -1,55 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Ui-Kit</title>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>  
+  <link rel="stylesheet" href="css/plugins/jquery.nouislider.css" >  
+  <link rel="stylesheet" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" type='text/css'>  
   <link rel="stylesheet" href="css/style.css">
-  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
-</head>
+  
+</head> 
 <body>
   <div class="container">
-    <section>
-      <h1 class="title title--first">Сетка</h1>
+  
+    <section class="ui-kit-section ui-kit-section__first grid">
+      <h1 class="title">Сетка</h1>
       <div class="row">
         <div class="col-12-1">
-          <div class="grid-element"></div>
+          <div class="grid--element"></div>
         </div>
         <div class="col-12-1">
-          <div class="grid-element"></div>
+          <div class="grid--element"></div>
         </div>
         <div class="col-12-1">
-          <div class="grid-element"></div>
+          <div class="grid--element"></div>
         </div>
         <div class="col-12-1">
-          <div class="grid-element"></div>
+          <div class="grid--element"></div>
         </div>
         <div class="col-12-1">
-          <div class="grid-element"></div>
+          <div class="grid--element"></div>
         </div>
         <div class="col-12-1">
-          <div class="grid-element"></div>
+          <div class="grid--element"></div>
         </div>
         <div class="col-12-1">
-          <div class="grid-element"></div>
+          <div class="grid--element"></div>
         </div>
         <div class="col-12-1">
-          <div class="grid-element"></div>
+          <div class="grid--element"></div>
         </div>
         <div class="col-12-1">
-          <div class="grid-element"></div>
+          <div class="grid--element"></div>
         </div>
         <div class="col-12-1">
-          <div class="grid-element"></div>
+          <div class="grid--element"></div>
         </div>
         <div class="col-12-1">
-          <div class="grid-element"></div>
+          <div class="grid--element"></div>
         </div>
         <div class="col-12-1">
-          <div class="grid-element"></div>
+          <div class="grid--element"></div>
         </div>
       </div>
     </section>
-    <section>
+
+    <section class="ui-kit-section typography">
       <h1 class="title">Типографика</h1>
       <div class="row">
         <div class="col-12-6">
@@ -59,15 +64,16 @@
           <h4>Почему непредсказуемо легато?</h4>
         </div>
         <div class="col-12-5">
-          <p>Первая производная, общеизвестно, изменяет тригонометрический звукосниматель, что известно даже школьникам. Определитель системы линейных уравнений многопланово нейтрализует интеграл от функции, обращающейся в бесконечность вдоль линии, благодаря быстрой смене тембров (каждый инструмент играет минимум звуков).</p>
+          <p>Первая производная, общеизвестно, изменяет тригонометрический звукосниматель,  что известно даже школьникам. Определитель системы линейных уравнений многопланово нейтрализует интеграл от функции, обращающейся в бесконечность вдоль линии, благодаря быстрой смене тембров (каждый инструмент играет минимум звуков).</p>
           <a href="#">Ссылка</a>
           <a href="#">Наведение</a>
         </div>
       </div>
     </section>    
-    <section>
+
+    <section class="ui-kit-section buttons">
       <h1 class="title">Кнопки</h1>
-      <div class="row margin_bottom">
+      <div class="row">
         <div class="col-12-6">
           <button class="btn">Кнопка</button>
           <button class="btn">Наведение</button>
@@ -79,7 +85,7 @@
           <button class="btn btn--small">Нажатие</button>
         </div>
       </div>
-      <div class="row margin_bottom">
+      <div class="row">
         <div class="col-12-6">
           <button class="btn btn--dark">Кнопка</button>
           <button class="btn btn--dark">Наведение</button>
@@ -91,7 +97,7 @@
           <button class="btn btn--dark btn--small">Нажатие</button>
         </div>
       </div>
-      <div class="row margin_bottom">
+      <div class="row margin_bottom_20">
         <div class="col-12-6">
           <button class="btn btn--carrot">Кнопка</button>
           <button class="btn btn--carrot">Наведение</button>
@@ -104,57 +110,311 @@
         </div>
       </div>
     </section>  
-    <section>
-      <h1 class="title">Картинки</h1>
 
+    <section class="ui-kit-section images">
+      <h1 class="title">Картинки</h1>
       <div class="row">
+
         <div class="col-12-3">
           <div class="img-container">
-            <img src="img/DontJustStand.gif"    alt="DontJustStand_img">  
+            <img src="img/img_area/DontJustStand.gif"    alt="just_img">  
           </div>          
         </div>
+
         <div class="col-12-3">
           <a href="#" class="img-container zoom-image">
-            <img src="img/DontJustStand.gif" alt="DontJustStand_img">
+            <img src="img/img_area/DontJustStand.gif" alt="zoom_img">
             <div class="blackout"></div>
           </a>  
         </div>   
 
         <div class="col-12-3">
           <div class="img-container">
-            <img src="img/DontJustStand.gif"  alt="DontJustStand_img">
-            <p class="img-container__tooltip">Всплывашечка с подписью поверх фотографии</p>
+            <img src="img/img_area/DontJustStand.gif"  alt="tooltip_img">
+            <p class="img-container__tooltip">Всплывашечка с подписью поверх фотографии
+            </p>
           </div>          
         </div>
 
         <div class="col-12-3">
           <div class="flip-container">              
               <div class="flip-container__back">
-                <p>При наведении фотография разворачивается, и на другой стороне оказывается текст</p>
+                <p>При наведении фотография разворачивается, и на другой стороне оказывается текст
+                </p>
               </div>
 
               <div class="flip-container__front">
-                <img src="img/DontJustStand.gif"  alt="DontJustStand_img">
+                <img src="img/img_area/DontJustStand.gif"  alt="flip_img">
               </div>              
           </div>          
         </div>
       </div>
     </section> 
-    <section>
-       <h1 class="title">Формы</h1>
-    </section> 
-      
-    <section class="">
-          <h1 class="title">Интерактив</h1>
+
+    <section class="ui-kit-section forms">
+      <h1 class="title">Формы</h1>
+      <div class="row">
+
+        <div class="col-12-4">
+          <form action="#">
+            <div class="input">
+              <input class="input__txt" type="text" placeholder="Полковнику никто не  пишет"> 
+            </div>
+            <div class="input">
+              <input class="input__txt"  type="text" value="Пишет!">
+            </div>
+            <div class="input input__error">
+              <input class="input__txt" type="text"  value="Но не то">                 
+            </div>             
+            <div class="input input__sucess">
+              <input class="input__txt" type="text" value="А, нет, всё правильно">
+            </div>
+          </form>
+        </div>
+
+        <div class="col-12-4">
+          <form action="#">            
+            <input type="text" data-role="tagsinput" value="Быстрее, Выше, Сильнее">             
+          </form>         
+        </div>
+
+        <div class="col-12-3.5">  
+          <form action="#">
+            <div class="row">
+              <div class="col-12-6">                       
+                <div class="label-checkbox">
+                  <input class="radio_type_one" type="radio" id="radio_one" name="z_radio" disabled="disabled" > 
+                  <label class="label-checkbox--disabled" for="radio_one">
+                      Неактивно
+                  </label>                   
+                </div>    
+
+                <div class="label-checkbox">                   
+                  <input class="radio_type_one" type="radio"  id="radio_two" name="z_radio"> 
+                  <label for="radio_two">
+                    Активно
+                  </label>                   
+                </div>
+
+                <div class="label-checkbox">                  
+                  <input class="radio_type_one" type="radio" id="radio_three" name="z_radio">
+                  <label for="radio_three">
+                    Отмечено
+                  </label>
+                </div> 
+              </div>
+
+              <div class="col-12-6">        
+                <div class="label-checkbox">
+                  <input class="checkbox_type_one" disabled="disabled" id="checkbox_one" type="checkbox"> 
+                  <label class="label-checkbox--disabled" for="checkbox_one">
+                    Неактивно
+                  </label>
+                </div>                                                   
+                <div class="label-checkbox">                   
+                  <input class="checkbox_type_one" id="checkbox_two" type="checkbox"> 
+                  <label for="checkbox_two">
+                    Активно
+                  </label>
+                </div>
+                <div class="label-checkbox">
+                  <input class="checkbox_type_one" id="checkbox_three" type="checkbox" >
+                  <label for="checkbox_three">
+                    Отмечено
+                  </label>
+                </div>   
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12-7">
+                <div class="label-checkbox">
+                  <input class="checkbox_type_two" id="switch_one" type="checkbox" disabled="disabled"> 
+                  <label for="switch_one" class="label-checkbox--disabled">
+                    Неактивно
+                  </label>
+                </div>
+
+                <div class="label-checkbox">
+                  <input class="checkbox_type_two" id="switch_two" type="checkbox"> 
+                  <label for="switch_two">
+                    Выключено
+                  </label>
+                </div>
+
+                <div class="label-checkbox">
+                  <input class="checkbox_type_two" id="switch_three" type="checkbox"> 
+                  <label for="switch_three">
+                    Включено
+                  </label>
+                </div>                
+              </div> 
+            </div>       
+          </form>                   
+        </div>
+      </div>
+    </section>     
+
+    <section class="ui-kit-section interactive">
+      <h1 class="title">Интерактив</h1>   
+      <div class="row">
+              <div class="col-12-6">
+                <div id="slides">
+                  <div class="slides_container">
+                    <img src="img/slider/Gravity.jpg" alt="Gravity">     
+                    <img src="img/slider/example-slide-1.jpg" alt="Old beach">
+                    <img src="img/slider/example-slide-2.jpg" alt="Sky Forest" >
+                  </div>  
+                  <a href="#" class="prev"><i class="fa fa-chevron-left"></i></a>
+                  <a href="#" class="next"><i class="fa fa-chevron-right"></i></a>
+                </div>
+              </div>            
+              <div class="col-12-6">
+                <div class="row">
+                  <div class="col-12-6">
+                     <div class="int_background">
+                       <a class="js-message_link" href="#">Любить значит страдать?</a>
+                       <p class='js-popup'>Положение сложное Соня</p>
+                     </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12-12">
+                    <div class="int_background">
+                      <div class="tabs">
+                        <ul class="tabs__menu">
+                            <li class="tabs__menu-item tabs__menu-one tabs__menu-item--active">
+                              Таб 1
+                            </li>
+                            <li class="tabs__menu-item tabs__menu-two">
+                              Таб 2
+                            </li>
+                            <li class="tabs__menu-item tabs__menu-three">
+                              Таб 3 
+                            </li>
+                            <li class="tabs__menu-item tabs__menu-four">
+                              Таб 4
+                            </li>
+                        </ul>
+                        <ul class="tabs__articles">
+                          <li class="tabs__article tabs__article-one tabs__article--active">
+                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, nulla quos ex nesciunt molestias distinctio ullam omnis ipsum tempora non nemo corporis cumque, tenetur, nostrum mollitia facilis similique officiis vel?
+                          </li>
+                          <li class="tabs__article tabs__article-two">
+                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae sit quia quaerat unde, quis, consequatur voluptatum dicta eum veniam ullam! Sit aut temporibus dolores exercitationem nam, perferendis impedit quae aspernatur?
+                          </li>
+                          <li class="tabs__article tabs__article-three">
+                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, nulla quos ex nesciunt molestias distinctio ullam omnis ipsum tempora non nemo corporis cumque, tenetur, nostrum mollitia facilis similique officiis vel?
+                          </li>
+                          <li class="tabs__article tabs__article-four">
+                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae sit quia quaerat unde, quis, consequatur voluptatum dicta eum veniam ullam! Sit aut temporibus dolores exercitationem nam, perferendis impedit quae aspernatur?
+                          </li>
+                        </ul>                                                            
+                      </div>    
+                    </div>                      
+                  </div>
+                </div>
+              </div>                      
+      </div>
     </section>
 
-    <section>
+    <section class="ui-kit-section forms-advanced">
       <h1 class="title">Продвинутые формы</h1>  
-    </section>
-  
-    <section>
-      <h1 class="title">Дополнительно</h1>  
-    </section>
+
+      <div class="row">
+        <div class="col-12-6">
+          <form action="#">
+            <div class="epick-slider-steps">              
+              <div class="epick-slider-steps--body">
+                <div class="epick-slider-steps--pill epick-slider-steps--pill__start">                  
+                </div>
+                <div class="epick-slider-steps--range epick-slider-steps--range__start">
+                </div>                
+                <div class="epick-slider-steps--pill epick-slider-steps--pill__half">                  
+                </div>
+                <div class="epick-slider-steps--range epick-slider-steps--range__finish">
+                </div> 
+                <div class="epick-slider-steps--pill epick-slider-steps--pill__finish">                  
+                </div>
+                <div class="epick-slider-steps--pill epick-slider-steps--pill__active">                  
+                </div>
+              </div>              
+              <div class="epick-slider-steps--legend">
+                <div class="row">
+                  <div class="col-12-4">
+                    <span>Шаг 1</span>
+                  </div>
+                  <div class="col-12-4 epick-slider-steps--txt-center">
+                    <span>Шаг 2</span>
+                  </div>
+                  <div class="col-12-4 epick-slider-steps--txt-right">
+                    <span>Шаг 3</span>
+                  </div>
+                </div>              
+              </div> 
+            </div>                                                    
+          </form>
+        </div>
+
+        <div class="col-12-4">
+          <form action="#">
+            <div class="rangeslider-wrap">
+              <div class="rangeslider">                
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12-4">
+          <form action="#">
+            <div class="rangeslider-wrap">
+              <div class="progress-bar" id="progress1">     
+                <div class="pbar">                    
+                </div>
+                <div class="progress-bar--time">
+                  <div class="progress-time">                      
+                  </div>
+                  <div class="elapsed">                      
+                  </div>  
+                </div>                  
+              </div>
+              <div class="progress-bar" id="progress2">
+                <div class="percent">                  
+                </div>
+                <div class="pbar">                  
+                </div>                
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-12-3">
+          <form>
+            <div class="switch">                                     
+              <input id="switch--on" class="switch--input" type="radio" name="switch--name" checked="checked">             
+              <label for="switch--on" class="switch--label">
+                Выбрано
+              </label>
+
+              <input id="switch--off" class="switch--input" type="radio" name="switch--name">                         
+              <label for="switch--off" class="switch--label">
+                 Не выбрано
+              </label>                             
+            </div>                            
+          </form>                
+        </div>
+      </div>
+    </section>      
   </div>
+
+  <script src="js/jquery-2.1.3.min.js"></script>  
+  <script src="js/jquery-ui-1.8.16.custom.min.js"></script>
+  <script src="js/jquery.nouislider.all.min.js"></script>
+  <script src="js/bootstrap-tagsinput.min.js"></script>  
+  <script src="js/slides.js"></script>   
+  <script src="js/progressbar.js"></script> 
+  <script src="js/script.js"></script>
 </body>
 </html>

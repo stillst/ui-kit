@@ -117,13 +117,13 @@ input[disabled="disabled"] + .label-checkbox--disabled{
 
 
 /*Checkbox_adv*/
-.radio_advance
+.switch
 {
   border: 2px solid @carrot-color;
   border-radius: 4px;
-  display: inline-block;
-  vertical-align: middle;
+  display: table;  
   font-size: 0; 
+  margin: 0 auto;
 
   &--input + label
   {
@@ -142,8 +142,7 @@ input[disabled="disabled"] + .label-checkbox--disabled{
     background-color: #fff;
     padding: 7px;   
     color: @carrot-color;
-    display: inline-block;
-    vertical-align: middle;
+    display: table-cell;  
     font-size: 14px;
     cursor: pointer;
   }

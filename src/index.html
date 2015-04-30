@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Ui-Kit</title>
-  <link rel="stylesheet" href="css/jquery.nouislider.css" >
-  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" type='text/css'>
-  <link rel="stylesheet" href="css/jquery-ui-1.8.16.custom.css"> 
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>  
+  <link rel="stylesheet" href="css/plugins/jquery.nouislider.css" >  
+  <link rel="stylesheet" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" type='text/css'>  
   <link rel="stylesheet" href="css/style.css">
   
 </head> 
@@ -319,7 +318,7 @@
       </div>
     </section>
 
-    <section class="ui-kit-section">
+    <section class="ui-kit-section forms-advanced">
       <h1 class="title">Продвинутые формы</h1>  
 
       <div class="row">
@@ -391,19 +390,18 @@
           </form>
         </div>
 
-        <div class="col-12-4">
+        <div class="col-12-3">
           <form>
-            <div class="radio_advance">
-              <input id="radio_advance--option-one" class="radio_advance--input" type="radio" name="radio_advance--name" checked="checked"> 
-
-              <label for="radio_advance--option-one" class="radio_advance--label">
+            <div class="switch">                                     
+              <input id="switch--on" class="switch--input" type="radio" name="switch--name" checked="checked">             
+              <label for="switch--on" class="switch--label">
                 Выбрано
               </label>
-              
-              <input id="radio_advance--option-two" class="radio_advance--input" type="radio" name="radio_advance--name">                         
-              <label for="radio_advance--option-two" class="radio_advance--label">
+
+              <input id="switch--off" class="switch--input" type="radio" name="switch--name">                         
+              <label for="switch--off" class="switch--label">
                  Не выбрано
-              </label>                                                                            
+              </label>                             
             </div>                            
           </form>                
         </div>
@@ -413,7 +411,7 @@
 
   <script src="js/jquery-2.1.3.min.js"></script>  
   <script src="js/jquery-ui-1.8.16.custom.min.js"></script>
-  <script src="js/jquery.nouislider.all.js"></script>
+  <script src="js/jquery.nouislider.all.min.js"></script>
   <script src="js/bootstrap-tagsinput.min.js"></script>  
   <script src="js/slides.js"></script>   
   <script src="js/progressbar.js"></script> 

@@ -54,6 +54,10 @@
   margin: 0 -18px;
   font-size: 0;
 }
+.grid--element {
+  background-color: #b3d4f9;
+  min-height: 34px;
+}
 /***************************
 ********Scafolding**********
 ***************************/
@@ -62,12 +66,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-.grid-element {
-  background-color: #b3d4f9;
-  min-height: 34px;
+.ui-kit-section {
+  margin-top: 80px;
 }
-.margin_bottom {
-  margin-bottom: 20px;
+.ui-kit-section__first {
+  margin-top: 25px;
 }
 /***************************
 ********Typography**********
@@ -108,23 +111,19 @@ a:hover {
   border-bottom: 1px solid #d8dadc;
   padding-bottom: 10px;
   margin-bottom: 25px;
-  margin-top: 80px;
-}
-.title--first {
-  margin-top: 20px;
-  margin-bottom: 45px;
 }
 /***************************
 ************BTNS************
 ***************************/
 .btn {
-  position: relative;
   cursor: pointer;
+  position: relative;
   color: #fff;
   padding: 10px 40px;
   border-radius: 4px;
   border: none;
   margin-right: 20px;
+  margin-bottom: 20px;
   outline: none;
   background-color: #a0d468;
   box-shadow: 0 3px 0 0 #8bc152;
@@ -193,7 +192,7 @@ a:hover {
 .zoom-image:after {
   content: '';
   position: absolute;
-  background-image: url(../img/icon-zoom-plus.png);
+  background-image: url(../img/img_area/icon-zoom-plus.png);
   background-size: 100%;
   height: 36px;
   width: 35px;
@@ -211,9 +210,7 @@ a:hover {
   opacity: 0.5;
 }
 .zoom-image:hover img {
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 .img-container__tooltip {
   position: absolute;
@@ -229,18 +226,15 @@ a:hover {
 }
 .flip-container {
   transition: 0.5s;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  transform-style: preserve-3d;
   position: relative;
 }
 .flip-container:hover {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 .flip-container__front,
 .flip-container__back {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
@@ -254,8 +248,7 @@ a:hover {
   width: 258px;
   height: 258px;
   border-radius: 5px;
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 .flip-container__back p {
   margin-top: 95px;
@@ -317,95 +310,129 @@ a:hover {
 /***************************
 *********Checkbox***********
 ***************************/
-.sprite {
-  background-image: url(spritesheet.png);
-  background-repeat: no-repeat;
+.label-checkbox {
   display: block;
-}
-.sprite.sprite-check_ {
-  background-position: -5px -5px;
-  width: 16px;
-  height: 16px;
-}
-.sprite.sprite-ckeck_active {
-  background-position: -31px -5px;
-  width: 16px;
-  height: 16px;
-}
-.sprite.sprite-ckeck_disabled {
-  background-position: -57px -5px;
-  width: 16px;
-  height: 16px;
-}
-.sprite.sprite-radio_ {
-  background-position: -83px -5px;
-  width: 16px;
-  height: 16px;
-}
-.sprite.sprite-radio_active {
-  background-position: -109px -5px;
-  width: 16px;
-  height: 16px;
-}
-.sprite.sprite-radio_disabled {
-  background-position: -135px -5px;
-  width: 16px;
-  height: 16px;
+  padding: 5px;
+  position: relative;
 }
 input[type="checkbox"],
 input[type="radio"] {
   display: none;
 }
-input[type="checkbox"] + label,
-input[type="radio"] + label {
-  font: 18px bold;
+.checkbox_type_one + label,
+.radio_type_one + label,
+.checkbox_type_two + label {
+  font: 16px bold;
   color: #444;
   cursor: pointer;
 }
-input[type="checkbox"] + label::before,
-input[type="radio"] + label::before {
+.checkbox_type_one + label::before,
+.radio_type_one + label::before {
   content: "";
   display: inline-block;
-  height: 18px;
-  width: 18px;
+  position: relative;
+  top: 2px;
+  height: 16px;
+  width: 16px;
   margin: 0 5px 0 0;
-  background-image: url(img/checkbox/spritesheet.png);
+  background-image: url(../img/checkbox/spritesheet.png);
   background-repeat: no-repeat;
 }
-input[type="checkbox"] + label::before {
+.checkbox_type_one:disabled + label::before {
+  background-position: -57px -5px;
+  width: 16px;
+  height: 16px;
+}
+.checkbox_type_one + label::before {
   background-position: -5px -5px;
   width: 16px;
   height: 16px;
 }
-input[type="radio"] + label::before {
-  background-position: -5px -5px;
+.checkbox_type_one:checked + label::before {
+  background-position: -31px -5px;
   width: 16px;
   height: 16px;
 }
-input[type="checkbox"]:checked + label::before {
-  background-position: -5px -5px;
+.radio_type_one:disabled + label::before {
+  background-position: -135px -5px;
   width: 16px;
   height: 16px;
 }
-input[type="radio"]:checked + label::before {
-  background-position: -5px -5px;
+.radio_type_one:checked + label::before {
+  background-position: -109px -5px;
   width: 16px;
   height: 16px;
 }
-input[type="checkbox"]:disabled + label::before {
-  background-position: -5px -5px;
+.radio_type_one + label::before {
+  background-position: -83px -5px;
   width: 16px;
   height: 16px;
 }
-input[type="checkbox"]:checked:disabled + label::before {
-  background-position: -5px -5px;
-  width: 16px;
+.checkbox_type_two + label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 5px;
   height: 16px;
+  width: 30px;
+  left: 0;
+  border-radius: 10px;
+  margin: 0 5px 0 0;
+  background-color: #eaeaea;
+  background-repeat: no-repeat;
 }
-input[type="radio"]:disabled + label::before {
-  background-position: -5px -5px;
-  width: 16px;
-  height: 16px;
+.checkbox_type_two + label::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 5px;
+  height: 14px;
+  width: 14px;
+  left: 0;
+  border-radius: 10px;
+  margin: 0 5px 0 0;
+  border: 1px solid #eaeaea;
+  background-color: #fff;
+  background-repeat: no-repeat;
+}
+.checkbox_type_two:checked + label::before {
+  background-color: #a0d468;
+}
+.checkbox_type_two:checked + label::after {
+  left: 14px;
+}
+.checkbox_type_two + label {
+  margin-left: 35px;
+}
+.checkbox_type_two:disabled + label::after {
+  background-color: #f8f8f8;
+}
+input[disabled="disabled"] + .label-checkbox--disabled {
+  color: #eaeaea;
+}
+/*Checkbox_adv*/
+.switch {
+  border: 2px solid #fc6e51;
+  border-radius: 4px;
+  display: table;
+  font-size: 0;
+  margin: 0 auto;
+}
+.switch--input + label {
+  background-color: #fff ;
+  color: #fc6e51;
+}
+.switch--input:checked + label {
+  background-color: #fc6e51;
+  color: #fff;
+}
+.switch--label {
+  background-color: #fff;
+  padding: 7px;
+  color: #fc6e51;
+  display: table-cell;
+  font-size: 14px;
+  cursor: pointer;
 }
 /***************************
 ************Forms***********
@@ -414,18 +441,7 @@ form {
   background-color: #fff;
   padding: 10px;
   border-radius: 5px;
-}
-form input.input--txt {
-  border: solid 1px #eaeaea;
-  border-radius: 5px;
-  background-color: #fff;
-  font-family: 'Roboto', sans-serif;
-  padding: 10px;
-  margin: 10px;
-  font-size: 15px;
-  font-weight: normal;
-  min-width: 80%;
-  outline: none;
+  margin-bottom: 35px;
 }
 form .input {
   position: relative;
@@ -452,7 +468,253 @@ form .input.input__error:before {
 form .input.input__error input {
   border: solid 2px #f2adad;
 }
-form .label-checkbox {
+form input.input__txt {
+  border: solid 1px #eaeaea;
+  border-radius: 5px;
+  background-color: #fff;
+  font-family: 'Roboto', sans-serif;
+  padding: 10px;
+  margin: 10px;
+  font-size: 15px;
+  font-weight: normal;
+  min-width: 80%;
+  outline: none;
+}
+/***************************
+************Slider**********
+***************************/
+#slides {
+  position: relative;
+}
+.slides_container {
+  width: 550px;
+  height: 340px;
+  border-radius: 5px;
+}
+.slides_container .slides_control {
+  width: 550px;
+  height: 340px;
   display: block;
+}
+.pagination {
+  position: absolute;
+  left: 45%;
+  list-style: none;
+  bottom: -30px;
+}
+.pagination li {
+  display: inline-block;
+  margin: 0 5px;
+}
+.pagination li a {
+  font-size: 0;
   padding: 5px;
+  border-radius: 10px;
+  background-color: #ffcabf;
+  background-repeat: no-repeat;
+}
+.prev {
+  position: absolute;
+  left: 40%;
+  bottom: -36px;
+}
+.next {
+  position: absolute;
+  left: 59%;
+  bottom: -36px;
+}
+.pagination .current a {
+  background-color: #fc6e51;
+}
+/***************************
+************TABS************
+***************************/
+.tabs__menu {
+  display: inline-block;
+  vertical-align: middle;
+  list-style: none;
+  border-bottom: 1px solid #d8dadc;
+  margin-bottom: 20px;
+}
+.tabs__menu .tabs__menu-item {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 5px 30px;
+  border: 1px solid #d8dadc;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  color: #000;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.tabs__menu .tabs__menu-item:nth-last-of-type(1) {
+  margin-right: 0;
+}
+.tabs__menu .tabs__menu-item--active {
+  background: #fc6e51;
+  border: none;
+  color: #fff;
+  border-bottom: 1px solid #fc6e51;
+}
+.tabs__article {
+  display: none;
+  list-style: none;
+}
+.tabs__article--active {
+  display: block;
+}
+/***************************
+******Step-Sliders**********
+***************************/
+.epick-slider-steps {
+  padding: 10px;
+  position: relative;
+}
+.epick-slider-steps--body {
+  font-size: 0;
+  padding: 5px 10px 5px 10px;
+}
+.epick-slider-steps--body .epick-slider-steps--pill,
+.epick-slider-steps--body .epick-slider-steps--range {
+  display: inline-block;
+  vertical-align: middle;
+}
+.epick-slider-steps--legend {
+  padding: 5px 0;
+}
+.epick-slider-steps--txt-center {
+  text-align: center;
+}
+.epick-slider-steps--txt-right {
+  text-align: right;
+}
+.epick-slider-steps--range {
+  background-color: #e6e9ed;
+  height: 3px;
+  width: 215px;
+}
+.epick-slider-steps--pill {
+  padding: 6px;
+  border-radius: 15px;
+  background-color: #e6e9ed;
+  border: 4px solid #fff;
+  top: 7px;
+}
+.epick-slider-steps--pill__start {
+  background-color: #fc6e51;
+}
+.epick-slider-steps--pill__active {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  background-color: #fc6e51;
+}
+.rangeslider-wrap {
+  padding: 35px 20px;
+}
+.rangeslider .noUi-handle {
+  width: 18px;
+  height: 18px;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  background-color: #fc6e51;
+  position: relative;
+  box-shadow: none;
+  left: -7px;
+}
+.rangeslider .noUi-connect {
+  background-color: #fc6e51;
+  box-shadow: none;
+}
+.rangeslider.noUi-horizontal {
+  height: 8px;
+}
+.rangeslider .noUi-base {
+  background-color: #e6e9ed;
+}
+.rangeslider .noUi-background {
+  background-color: #e6e9ed;
+}
+.rangeslider-tooltip {
+  position: absolute;
+  bottom: 20px;
+  min-width: 60px;
+  margin-left: -15px;
+  text-align: center;
+}
+/***************************
+*******Progress bar*********
+***************************/
+.pbar .ui-progressbar-value {
+  display: block !important;
+}
+.progress-bar .ui-progressbar {
+  height: 10px;
+  background: #e6e9ed;
+}
+.progress-bar .ui-widget-header {
+  border: none;
+  background: #fc6e51;
+}
+.progress-bar .ui-progressbar-value {
+  margin: 0px;
+  height: 100%;
+  border-radius: 10px;
+}
+.progress-bar .ui-widget-content {
+  border: none;
+  background: #eeeeee ;
+}
+.progress-bar .percent {
+  text-align: center;
+  color: #bfbfbf;
+}
+.progress-bar .elapsed {
+  color: #aab2bd;
+  float: right;
+  font-size: 11px;
+}
+.progress-bar .progress-time {
+  color: #aab2bd;
+  float: left;
+  font-size: 11px;
+}
+.progress-bar .progress-bar--time {
+  overflow: hidden;
+}
+/***************************
+*********Interactive********
+***************************/
+.int_background {
+  background-color: #fff;
+  min-height: 120px;
+  padding: 20px 30px;
+  margin-bottom: 30px;
+}
+.js-message_link {
+  color: #e86060;
+  text-decoration: none;
+}
+.js-message_link:hover ~ .js-popup {
+  display: block;
+}
+.js-popup {
+  padding: 3px 3px 3px 15px;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 13px;
+  margin-top: 15px;
+  background-color: #fc6e51;
+  position: relative;
+  cursor: pointer;
+  display: none;
+  /*triangle*/
+}
+.js-popup::before {
+  content: '';
+  position: absolute;
+  left: 45%;
+  top: -20px;
+  border: 10px solid transparent;
+  border-bottom: 10px solid #fc6e51;
 }

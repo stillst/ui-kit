@@ -411,27 +411,26 @@ input[disabled="disabled"] + .label-checkbox--disabled {
   color: #eaeaea;
 }
 /*Checkbox_adv*/
-.radio_advance {
+.switch {
   border: 2px solid #fc6e51;
   border-radius: 4px;
-  display: inline-block;
-  vertical-align: middle;
+  display: table;
   font-size: 0;
+  margin: 0 auto;
 }
-.radio_advance--input + label {
+.switch--input + label {
   background-color: #fff ;
   color: #fc6e51;
 }
-.radio_advance--input:checked + label {
+.switch--input:checked + label {
   background-color: #fc6e51;
   color: #fff;
 }
-.radio_advance--label {
+.switch--label {
   background-color: #fff;
   padding: 7px;
   color: #fc6e51;
-  display: inline-block;
-  vertical-align: middle;
+  display: table-cell;
   font-size: 14px;
   cursor: pointer;
 }
@@ -442,6 +441,7 @@ form {
   background-color: #fff;
   padding: 10px;
   border-radius: 5px;
+  margin-bottom: 35px;
 }
 form .input {
   position: relative;
