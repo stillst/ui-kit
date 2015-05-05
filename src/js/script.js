@@ -35,19 +35,20 @@ $( document ).ready(function()
         range:{min:0,max:15000},
         format:wNumb({decimals:0,postfix:"Р"})
       });
-
+     
       $(".rangeslider").Link("lower").to('-inline-<div class="rangeslider-tooltip"></div>',
       function(a)
       {
         $(this).html("<span>"+a+"</span>")
       });
-
+      
       $(".rangeslider").Link("upper").to('-inline-<div class="rangeslider-tooltip"></div>',
       function(a)
       {
         $(this).html("<span>"+a+"</span>")
       });
-      
+      $(".rangeslider").Link("lower").to($('#range_lower'));
+      $(".rangeslider").Link("upper").to($('#range_upper'));
       //$(".epick-slider-steps--pill__active").draggable({ grid: [100,50] });
     });
 

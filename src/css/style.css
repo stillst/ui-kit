@@ -72,6 +72,15 @@
 .ui-kit-section__first {
   margin-top: 25px;
 }
+.background_sample {
+  background-color: #fff;
+  padding: 20px 10px;
+  border-radius: 5px;
+  margin-bottom: 35px;
+}
+.background_sample__tall {
+  min-height: 120px;
+}
 /***************************
 ********Typography**********
 ***************************/
@@ -439,9 +448,6 @@ input[disabled="disabled"] + .label-checkbox--disabled {
 ***************************/
 form {
   background-color: #fff;
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 35px;
 }
 form .input {
   position: relative;
@@ -564,7 +570,7 @@ form input.input__txt {
   display: block;
 }
 /***************************
-******Step-Sliders**********
+******Step-Slider**********
 ***************************/
 .epick-slider-steps {
   padding: 10px;
@@ -609,6 +615,9 @@ form input.input__txt {
   top: 15px;
   background-color: #fc6e51;
 }
+/***************************
+******Range-Slider**********
+***************************/
 .rangeslider-wrap {
   padding: 35px 20px;
 }
@@ -621,6 +630,12 @@ form input.input__txt {
   position: relative;
   box-shadow: none;
   left: -7px;
+}
+.rangeslider .noUi-handle:before {
+  display: none;
+}
+.rangeslider .noUi-handle:after {
+  display: none;
 }
 .rangeslider .noUi-connect {
   background-color: #fc6e51;
@@ -642,55 +657,58 @@ form input.input__txt {
   margin-left: -15px;
   text-align: center;
 }
+#range_lower {
+  display: none;
+}
+#range_upper {
+  display: none;
+}
 /***************************
 *******Progress bar*********
 ***************************/
 .pbar .ui-progressbar-value {
   display: block !important;
 }
-.progress-bar .ui-progressbar {
+.progress-bar-wrap {
+  padding: 20px 20px;
+}
+.progress-bar-wrap .progress-bar .ui-progressbar {
   height: 10px;
   background: #e6e9ed;
 }
-.progress-bar .ui-widget-header {
+.progress-bar-wrap .progress-bar .ui-widget-header {
   border: none;
   background: #fc6e51;
 }
-.progress-bar .ui-progressbar-value {
+.progress-bar-wrap .progress-bar .ui-progressbar-value {
   margin: 0px;
   height: 100%;
   border-radius: 10px;
 }
-.progress-bar .ui-widget-content {
+.progress-bar-wrap .progress-bar .ui-widget-content {
   border: none;
   background: #eeeeee ;
 }
-.progress-bar .percent {
+.progress-bar-wrap .progress-bar .percent {
   text-align: center;
   color: #bfbfbf;
 }
-.progress-bar .elapsed {
+.progress-bar-wrap .progress-bar .elapsed {
   color: #aab2bd;
   float: right;
   font-size: 11px;
 }
-.progress-bar .progress-time {
+.progress-bar-wrap .progress-bar .progress-time {
   color: #aab2bd;
   float: left;
   font-size: 11px;
 }
-.progress-bar .progress-bar--time {
+.progress-bar-wrap .progress-bar .progress-bar--time {
   overflow: hidden;
 }
 /***************************
 *********Interactive********
 ***************************/
-.int_background {
-  background-color: #fff;
-  min-height: 120px;
-  padding: 20px 30px;
-  margin-bottom: 30px;
-}
 .js-message_link {
   color: #e86060;
   text-decoration: none;
