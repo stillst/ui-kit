@@ -1,6 +1,5 @@
 _design
 temp
-dist
 src/bower
 src\bower\
 node_modules
