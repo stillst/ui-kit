@@ -8,6 +8,7 @@
   list-style: none; 
   border-bottom: 1px solid @grey-line;
   margin-bottom: 20px;
+  
 
   & .tabs__menu-item
   {
@@ -20,18 +21,21 @@
     color:#000;  
     margin-right: 5px;
     cursor: pointer;
+    position: relative;
+    top:1px;
+    
+    &--active
+    {
+      background:  @carrot-color;
+      border:  1px solid @carrot-color;
+      border-bottom:none;
+      color:#fff;
+       
+    }
 
     &:nth-last-of-type(1)
     {
       margin-right: 0;
-    }
-
-    &--active
-    {
-      background:  @carrot-color;
-      border: none;
-      color:#fff;
-      border-bottom: 1px solid @carrot-color;  
     }
   } 
 }

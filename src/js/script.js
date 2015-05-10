@@ -11,6 +11,28 @@ $( document ).ready(function()
       });
    });
 
+   //tooltip
+   
+   $(function()
+   {
+      $(document).on('mouseenter', '.js-tooltip__message', function()
+      { 
+        $(".js-tooltip__popup").addClass("visible_block");                                                                    
+      });
+
+      $(document).on('mouseleave', '.js-tooltip', function()
+      { 
+        $(".js-tooltip__popup").removeClass("visible_block");                                                                    
+      });
+
+      $(document).on('mousedown', '.js-tooltip__popup', function()
+      { 
+        $(".js-tooltip__popup").removeClass("visible_block");                                                                    
+      });
+      
+   });
+  
+
    //tabs 
    $(function()
    {
@@ -49,103 +71,103 @@ $( document ).ready(function()
       });
       $(".rangeslider").Link("lower").to($('#range_lower'));
       $(".rangeslider").Link("upper").to($('#range_upper'));
-      //$(".epick-slider-steps--pill__active").draggable({ grid: [100,50] });
+      //$(".steps--pill__active").draggable({ grid: [100,50] });
     });
 
    //tree-steps-slider
    $(function()
    {
    
-    $(document).on('click', '.epick-slider-steps--pill__start', function()
+    $(document).on('click', '.steps__pill--start', function()
       { 
-        $(".epick-slider-steps--pill__half").css('background-color','#e6e9ed');                      
-        $(".epick-slider-steps--pill__finish").css('background-color','#e6e9ed'); 
-        $(".epick-slider-steps--range__start").css('background-color','#e6e9ed');
-        $(".epick-slider-steps--range__finish").css('background-color','#e6e9ed');                
-        $(".epick-slider-steps--pill__active").css('left','20px'); 
+        $(".steps__pill--half").css('background-color','#e6e9ed');                      
+        $(".steps__pill--finish").css('background-color','#e6e9ed'); 
+        $(".steps__range--start").css('background-color','#e6e9ed');
+        $(".steps__range--finish").css('background-color','#e6e9ed');                
+        $(".steps__pill--active").css('left','20px'); 
       });
 
-    $(document).on('click', '.epick-slider-steps--pill__half', function()
+    $(document).on('click', '.steps__pill--half', function()
       {   
-        $(".epick-slider-steps--pill__half").css('background-color','#fc6e51');                      
-        $(".epick-slider-steps--pill__finish").css('background-color','#e6e9ed');
-        $(".epick-slider-steps--range__start").css('background-color','#fc6e51');
-        $(".epick-slider-steps--range__finish").css('background-color','#e6e9ed');              
-        $(".epick-slider-steps--pill__active").css('left','255px');  
+        $(".steps__pill--half").css('background-color','#fc6e51');                      
+        $(".steps__pill--finish").css('background-color','#e6e9ed');
+        $(".steps__range--start").css('background-color','#fc6e51');
+        $(".steps__range--finish").css('background-color','#e6e9ed');              
+        $(".steps__pill--active").css('left','255px');  
       });
 
-    $(document).on('click', '.epick-slider-steps--pill__finish', function()
+    $(document).on('click', '.steps__pill--finish', function()
       {   
 
-        $(".epick-slider-steps--pill__half").css('background-color','#fc6e51');                      
-        $(".epick-slider-steps--pill__finish").css('background-color','#fc6e51');
-        $(".epick-slider-steps--range__start").css('background-color','#fc6e51');
-        $(".epick-slider-steps--range__finish").css('background-color','#fc6e51');              
-        $(".epick-slider-steps--pill__active").css('left','487px'); 
+        $(".steps__pill--half").css('background-color','#fc6e51');                      
+        $(".steps__pill--finish").css('background-color','#fc6e51');
+        $(".steps__range--start").css('background-color','#fc6e51');
+        $(".steps__range--finish").css('background-color','#fc6e51');              
+        $(".steps__pill--active").css('left','487px'); 
       });
 
-    $(document).on('click', '.epick-slider-steps--range__start', function()
+    $(document).on('click', '.steps__range--start', function()
       { 
 
-        var margin_left = $('.epick-slider-steps--pill__active').css('left');
+        var margin_left = $('.steps__pill--active').css('left');
         console.log(margin_left); 
         if (margin_left == '20px')
         {
-            $(".epick-slider-steps--pill__half").css('background-color','#fc6e51');                      
-            $(".epick-slider-steps--pill__finish").css('background-color','#e6e9ed');
-            $(".epick-slider-steps--range__start").css('background-color','#fc6e51');
-            $(".epick-slider-steps--range__finish").css('background-color','#e6e9ed');              
-            $(".epick-slider-steps--pill__active").css('left','255px');  
+            $(".steps__pill--half").css('background-color','#fc6e51');                      
+            $(".steps__pill--finish").css('background-color','#e6e9ed');
+            $(".steps__range--start").css('background-color','#fc6e51');
+            $(".steps__range--finish").css('background-color','#e6e9ed');              
+            $(".steps__pill--active").css('left','255px');  
         }
         else if (margin_left == '255px')
         {
-          $(".epick-slider-steps--pill__half").css('background-color','#e6e9ed');                      
-          $(".epick-slider-steps--pill__finish").css('background-color','#e6e9ed'); 
-          $(".epick-slider-steps--range__start").css('background-color','#e6e9ed');
-          $(".epick-slider-steps--range__finish").css('background-color','#e6e9ed');                
-          $(".epick-slider-steps--pill__active").css('left','20px'); 
+          $(".steps__pill--half").css('background-color','#e6e9ed');                      
+          $(".steps__pill--finish").css('background-color','#e6e9ed'); 
+          $(".steps__range--start").css('background-color','#e6e9ed');
+          $(".steps__range--finish").css('background-color','#e6e9ed');                
+          $(".steps__pill--active").css('left','20px'); 
         }
 
         else if (margin_left == '487px')
         {
-          $(".epick-slider-steps--pill__half").css('background-color','#fc6e51');                      
-          $(".epick-slider-steps--pill__finish").css('background-color','#e6e9ed');
-          $(".epick-slider-steps--range__start").css('background-color','#fc6e51');
-          $(".epick-slider-steps--range__finish").css('background-color','#e6e9ed');              
-          $(".epick-slider-steps--pill__active").css('left','255px');
+          $(".steps__pill--half").css('background-color','#fc6e51');                      
+          $(".steps__pill--finish").css('background-color','#e6e9ed');
+          $(".steps__range--start").css('background-color','#fc6e51');
+          $(".steps__range--finish").css('background-color','#e6e9ed');              
+          $(".steps__pill--active").css('left','255px');
         }       
       });
 
 
-    $(document).on('click', '.epick-slider-steps--range__finish', function()
+    $(document).on('click', '.steps__range--finish', function()
       { 
 
-        var margin_left = $('.epick-slider-steps--pill__active').css('left');
+        var margin_left = $('.steps__pill--active').css('left');
         console.log(margin_left); 
         if (margin_left == '20px')
         {
-            $(".epick-slider-steps--pill__half").css('background-color','#fc6e51');                      
-            $(".epick-slider-steps--pill__finish").css('background-color','#e6e9ed');
-            $(".epick-slider-steps--range__start").css('background-color','#fc6e51');
-            $(".epick-slider-steps--range__finish").css('background-color','#e6e9ed');              
-            $(".epick-slider-steps--pill__active").css('left','255px');  
+            $(".steps__pill--half").css('background-color','#fc6e51');                      
+            $(".steps__pill--finish").css('background-color','#e6e9ed');
+            $(".steps__range--start").css('background-color','#fc6e51');
+            $(".steps__range--finish").css('background-color','#e6e9ed');              
+            $(".steps__pill--active").css('left','255px');  
         }
         else if (margin_left == '255px')
         {
-          $(".epick-slider-steps--pill__half").css('background-color','#fc6e51');                      
-          $(".epick-slider-steps--pill__finish").css('background-color','#fc6e51');
-          $(".epick-slider-steps--range__start").css('background-color','#fc6e51');
-          $(".epick-slider-steps--range__finish").css('background-color','#fc6e51');              
-          $(".epick-slider-steps--pill__active").css('left','487px'); 
+          $(".steps__pill--half").css('background-color','#fc6e51');                      
+          $(".steps__pill--finish").css('background-color','#fc6e51');
+          $(".steps__range--start").css('background-color','#fc6e51');
+          $(".steps__range--finish").css('background-color','#fc6e51');              
+          $(".steps__pill--active").css('left','487px'); 
         }
 
         else if (margin_left == '487px')
         {
-          $(".epick-slider-steps--pill__half").css('background-color','#fc6e51');                      
-          $(".epick-slider-steps--pill__finish").css('background-color','#e6e9ed');
-          $(".epick-slider-steps--range__start").css('background-color','#fc6e51');
-          $(".epick-slider-steps--range__finish").css('background-color','#e6e9ed');              
-          $(".epick-slider-steps--pill__active").css('left','255px');
+          $(".steps__pill--half").css('background-color','#fc6e51');                      
+          $(".steps__pill--finish").css('background-color','#e6e9ed');
+          $(".steps__range--start").css('background-color','#fc6e51');
+          $(".steps__range--finish").css('background-color','#e6e9ed');              
+          $(".steps__pill--active").css('left','255px');
         }       
       });
    });   

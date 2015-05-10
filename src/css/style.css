@@ -69,7 +69,7 @@
 .ui-kit-section {
   margin-top: 80px;
 }
-.ui-kit-section__first {
+.ui-kit-section--first {
   margin-top: 25px;
 }
 .background_sample {
@@ -78,7 +78,7 @@
   border-radius: 5px;
   margin-bottom: 35px;
 }
-.background_sample__tall {
+.background_sample--tall {
   min-height: 120px;
 }
 /***************************
@@ -328,14 +328,14 @@ input[type="checkbox"],
 input[type="radio"] {
   display: none;
 }
-.checkbox_type_one + label,
+.checkbox-custom + label,
 .radio_type_one + label,
-.checkbox_type_two + label {
+.switch + label {
   font: 16px bold;
   color: #444;
   cursor: pointer;
 }
-.checkbox_type_one + label::before,
+.checkbox-custom + label::before,
 .radio_type_one + label::before {
   content: "";
   display: inline-block;
@@ -347,17 +347,17 @@ input[type="radio"] {
   background-image: url(../img/checkbox/spritesheet.png);
   background-repeat: no-repeat;
 }
-.checkbox_type_one:disabled + label::before {
+.checkbox-custom:disabled + label::before {
   background-position: -57px -5px;
   width: 16px;
   height: 16px;
 }
-.checkbox_type_one + label::before {
+.checkbox-custom + label::before {
   background-position: -5px -5px;
   width: 16px;
   height: 16px;
 }
-.checkbox_type_one:checked + label::before {
+.checkbox-custom:checked + label::before {
   background-position: -31px -5px;
   width: 16px;
   height: 16px;
@@ -377,7 +377,7 @@ input[type="radio"] {
   width: 16px;
   height: 16px;
 }
-.checkbox_type_two + label::before {
+.switch + label::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -390,7 +390,7 @@ input[type="radio"] {
   background-color: #eaeaea;
   background-repeat: no-repeat;
 }
-.checkbox_type_two + label::after {
+.switch + label::after {
   content: "";
   display: inline-block;
   position: absolute;
@@ -404,19 +404,19 @@ input[type="radio"] {
   background-color: #fff;
   background-repeat: no-repeat;
 }
-.checkbox_type_two:checked + label::before {
+.switch:checked + label::before {
   background-color: #a0d468;
 }
-.checkbox_type_two:checked + label::after {
+.switch:checked + label::after {
   left: 14px;
 }
-.checkbox_type_two + label {
+.switch + label {
   margin-left: 35px;
 }
-.checkbox_type_two:disabled + label::after {
+.switch:disabled + label::after {
   background-color: #f8f8f8;
 }
-input[disabled="disabled"] + .label-checkbox--disabled {
+input[disabled="disabled"] + .label-checkbox__disabled {
   color: #eaeaea;
 }
 /*Checkbox_adv*/
@@ -552,15 +552,17 @@ form input.input__txt {
   color: #000;
   margin-right: 5px;
   cursor: pointer;
-}
-.tabs__menu .tabs__menu-item:nth-last-of-type(1) {
-  margin-right: 0;
+  position: relative;
+  top: 1px;
 }
 .tabs__menu .tabs__menu-item--active {
   background: #fc6e51;
-  border: none;
+  border: 1px solid #fc6e51;
+  border-bottom: none;
   color: #fff;
-  border-bottom: 1px solid #fc6e51;
+}
+.tabs__menu .tabs__menu-item:nth-last-of-type(1) {
+  margin-right: 0;
 }
 .tabs__article {
   display: none;
@@ -572,44 +574,45 @@ form input.input__txt {
 /***************************
 ******Step-Slider**********
 ***************************/
-.epick-slider-steps {
+.steps {
   padding: 10px;
   position: relative;
 }
-.epick-slider-steps--body {
+.steps__body {
   font-size: 0;
   padding: 5px 10px 5px 10px;
 }
-.epick-slider-steps--body .epick-slider-steps--pill,
-.epick-slider-steps--body .epick-slider-steps--range {
+.steps__body .steps__pill,
+.steps__body .steps__range {
   display: inline-block;
   vertical-align: middle;
+  cursor: pointer;
 }
-.epick-slider-steps--legend {
+.steps__legend {
   padding: 5px 0;
 }
-.epick-slider-steps--txt-center {
+.steps__txt-center {
   text-align: center;
 }
-.epick-slider-steps--txt-right {
+.steps__txt-right {
   text-align: right;
 }
-.epick-slider-steps--range {
+.steps__range {
   background-color: #e6e9ed;
   height: 3px;
   width: 215px;
 }
-.epick-slider-steps--pill {
+.steps__pill {
   padding: 6px;
   border-radius: 15px;
   background-color: #e6e9ed;
   border: 4px solid #fff;
   top: 7px;
 }
-.epick-slider-steps--pill__start {
+.steps__pill--start {
   background-color: #fc6e51;
 }
-.epick-slider-steps--pill__active {
+.steps__pill--active {
   position: absolute;
   left: 20px;
   top: 15px;
@@ -629,6 +632,7 @@ form input.input__txt {
   background-color: #fc6e51;
   position: relative;
   box-shadow: none;
+  cursor: pointer;
   left: -7px;
 }
 .rangeslider .noUi-handle:before {
@@ -666,7 +670,7 @@ form input.input__txt {
 /***************************
 *******Progress bar*********
 ***************************/
-.pbar .ui-progressbar-value {
+.progress-bar__ui .ui-progressbar-value {
   display: block !important;
 }
 .progress-bar-wrap {
@@ -675,6 +679,7 @@ form input.input__txt {
 .progress-bar-wrap .progress-bar .ui-progressbar {
   height: 10px;
   background: #e6e9ed;
+  border-radius: 10px;
 }
 .progress-bar-wrap .progress-bar .ui-widget-header {
   border: none;
@@ -689,34 +694,39 @@ form input.input__txt {
   border: none;
   background: #eeeeee ;
 }
-.progress-bar-wrap .progress-bar .percent {
+.progress-bar-wrap .progress-bar__percent {
   text-align: center;
   color: #bfbfbf;
 }
-.progress-bar-wrap .progress-bar .elapsed {
+.progress-bar-wrap .progress-bar__time {
+  overflow: hidden;
+}
+.progress-bar-wrap .progress-bar__time-finish {
   color: #aab2bd;
   float: right;
   font-size: 11px;
 }
-.progress-bar-wrap .progress-bar .progress-time {
+.progress-bar-wrap .progress-bar__time-start {
   color: #aab2bd;
   float: left;
   font-size: 11px;
 }
-.progress-bar-wrap .progress-bar .progress-bar--time {
-  overflow: hidden;
-}
 /***************************
 *********Interactive********
 ***************************/
-.js-message_link {
+.js-tooltip {
+  background-color: #fff;
+  padding: 20px 10px;
+  border-radius: 5px;
+  margin-bottom: 35px;
+  min-height: 120px;
+  text-align: center;
+}
+.js-tooltip__message {
   color: #e86060;
   text-decoration: none;
 }
-.js-message_link:hover ~ .js-popup {
-  display: block;
-}
-.js-popup {
+.js-tooltip__popup {
   padding: 3px 3px 3px 15px;
   color: #fff;
   border-radius: 5px;
@@ -728,11 +738,14 @@ form input.input__txt {
   display: none;
   /*triangle*/
 }
-.js-popup::before {
+.js-tooltip__popup::before {
   content: '';
   position: absolute;
   left: 45%;
   top: -20px;
   border: 10px solid transparent;
   border-bottom: 10px solid #fc6e51;
+}
+.visible_block {
+  display: block;
 }

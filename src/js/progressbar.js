@@ -21,7 +21,7 @@ $(document).ready(function(){
                 var iDuration = aOpts.finish - aOpts.start;
 
                 // calling original progressbar
-                $(vPb).children('.pbar').progressbar();
+                $(vPb).children('.progress-bar__ui').progressbar();
 
                 // looping process
                 var vInterval = setInterval(
@@ -37,17 +37,17 @@ $(document).ready(function(){
                             iPerc = (iElapsedMs > 0) ? iElapsedMs / iDuration * 100 : 0; // percentages
 
                         // display current positions and progress
-                        $(vPb).children('.percent').html(iPerc.toFixed(1)+'%');
-                        $(vPb).children('.progress-bar--time').children('.progress-time').html(lMin+':'+lSec);
-                        $(vPb).children('.progress-bar--time').children('.elapsed').html(iMin+':'+iSec);
-                        $(vPb).children('.pbar').children('.ui-progressbar-value').css('width', iPerc+'%');
+                        $(vPb).children('.progress-bar__percent').html(iPerc.toFixed(1)+'%');
+                        $(vPb).children('.progress-bar__time').children('.progress-bar__time-start').html(lMin+':'+lSec);
+                        $(vPb).children('.progress-bar__time').children('.progress-bar__time-finish').html(iMin+':'+iSec);
+                        $(vPb).children('.progress-bar__ui').children('.ui-progressbar-value').css('width', iPerc+'%');
 
                         // in case of Finish
                         if (iPerc >= 100) {
                             clearInterval(vInterval);
-                            $(vPb).children('.progress-bar--time').children('.progress-time').html('0:0');
-                            $(vPb).children('.progress-bar--time').children('.elapsed').html('5:00');
-                            $(vPb).children('.percent').html('100%');
+                            $(vPb).children('.progress-bar__time').children('.progress-bar__time-start').html('0:0');
+                            $(vPb).children('.progress-bar__time').children('.progress-bar__time-finish').html('5:00');
+                            $(vPb).children('.progress-bar__percent').html('100%');
                         }
                     } ,aOpts.interval
                 );

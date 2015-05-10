@@ -20,15 +20,15 @@ input[type="radio"] {
     display:none;            
 }
 
-.checkbox_type_one + label, 
+.checkbox-custom + label, 
 .radio_type_one + label,
-.checkbox_type_two + label
+.switch + label
 {
   font: 16px bold;
   color: #444;
   cursor: pointer;
 }
-.checkbox_type_one + label::before,
+.checkbox-custom + label::before,
 .radio_type_one + label::before {
     content: "";
     display: inline-block;
@@ -41,15 +41,15 @@ input[type="radio"] {
     background-repeat: no-repeat;
 }
 
-.checkbox_type_one:disabled+ label::before {
+.checkbox-custom:disabled+ label::before {
     .stitches-sprite(-57px, -5px, 16px, 16px);
 }
 
-.checkbox_type_one + label::before {
+.checkbox-custom + label::before {
     .stitches-sprite(-5px, -5px, 16px, 16px);  
 }
 
-.checkbox_type_one:checked + label::before {
+.checkbox-custom:checked + label::before {
      .stitches-sprite(-31px, -5px, 16px, 16px);
 }
 
@@ -64,7 +64,7 @@ input[type="radio"] {
       .stitches-sprite(-83px, -5px, 16px, 16px);
 }
 
-.checkbox_type_two + label::before {
+.switch + label::before {
     content: "";
     display: inline-block;
     position: absolute;
@@ -78,7 +78,7 @@ input[type="radio"] {
     background-repeat: no-repeat;
 }
 
-.checkbox_type_two + label::after {
+.switch + label::after {
   content: "";
   display: inline-block;
   position: absolute;
@@ -93,23 +93,23 @@ input[type="radio"] {
   background-repeat: no-repeat;
 }
 
-.checkbox_type_two:checked + label::before {    
+.switch:checked + label::before {    
     background-color: @green-color;   
 }
 
-.checkbox_type_two:checked + label::after {  
+.switch:checked + label::after {  
   left: 14px;  
 }
 
-.checkbox_type_two +label{
+.switch +label{
   margin-left: 35px;
 }
 
-.checkbox_type_two:disabled + label::after {
+.switch:disabled + label::after {
      background-color: @grey-disabled;
 }
 
-input[disabled="disabled"] + .label-checkbox--disabled{
+input[disabled="disabled"] + .label-checkbox__disabled{
     color:@grey-checkbox;
 }
 

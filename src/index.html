@@ -20,7 +20,7 @@
 <body>
   <div class="container">
   
-    <section class="ui-kit-section ui-kit-section__first grid">
+    <section class="ui-kit-section ui-kit-section--first grid">
       <h1 class="title">Сетка</h1>
       <div class="row">
         <div class="col-12-1">
@@ -196,7 +196,7 @@
                 <div class="col-12-6">                       
                   <div class="label-checkbox">
                     <input class="radio_type_one" type="radio" id="radio_one" name="z_radio" disabled="disabled" > 
-                    <label class="label-checkbox--disabled" for="radio_one">
+                    <label class="label-checkbox__disabled" for="radio_one">
                         Неактивно
                     </label>                   
                   </div>    
@@ -218,19 +218,19 @@
 
                 <div class="col-12-6">        
                   <div class="label-checkbox">
-                    <input class="checkbox_type_one" disabled="disabled" id="checkbox_one" type="checkbox"> 
-                    <label class="label-checkbox--disabled" for="checkbox_one">
+                    <input class="checkbox-custom" disabled="disabled" id="checkbox_one" type="checkbox"> 
+                    <label class="label-checkbox__disabled" for="checkbox_one">
                       Неактивно
                     </label>
                   </div>                                                   
                   <div class="label-checkbox">                   
-                    <input class="checkbox_type_one" id="checkbox_two" type="checkbox"> 
+                    <input class="checkbox-custom" id="checkbox_two" type="checkbox"> 
                     <label for="checkbox_two">
                       Активно
                     </label>
                   </div>
                   <div class="label-checkbox">
-                    <input class="checkbox_type_one" id="checkbox_three" type="checkbox" >
+                    <input class="checkbox-custom" id="checkbox_three" type="checkbox" >
                     <label for="checkbox_three">
                       Отмечено
                     </label>
@@ -241,21 +241,21 @@
               <div class="row">
                 <div class="col-12-7">
                   <div class="label-checkbox">
-                    <input class="checkbox_type_two" id="switch_one" type="checkbox" disabled="disabled"> 
-                    <label for="switch_one" class="label-checkbox--disabled">
+                    <input class="switch" id="switch_one" type="checkbox" disabled="disabled"> 
+                    <label for="switch_one" class="label-checkbox__disabled">
                       Неактивно
                     </label>
                   </div>
 
                   <div class="label-checkbox">
-                    <input class="checkbox_type_two" id="switch_two" type="checkbox"> 
+                    <input class="switch" id="switch_two" type="checkbox"> 
                     <label for="switch_two">
                       Выключено
                     </label>
                   </div>
 
                   <div class="label-checkbox">
-                    <input class="checkbox_type_two" id="switch_three" type="checkbox"> 
+                    <input class="switch" id="switch_three" type="checkbox"> 
                     <label for="switch_three">
                       Включено
                     </label>
@@ -284,11 +284,11 @@
               </div>            
               <div class="col-12-6">
                 <div class="row">
-                  <div class="col-12-6">
-                     <div class="background_sample background_sample__tall">
-                       <a class="js-message_link" href="#">Любить значит страдать?</a>
-                       <p class='js-popup'>Положение сложное Соня</p>
-                     </div>
+                  <div class="col-12-6">                    
+                     <div class="js-tooltip">
+                        <a class="js-tooltip__message" href="#">Любить значит страдать?</a>
+                        <p class='js-tooltip__popup'>Положение сложное Соня</p>  
+                     </div>                                               
                   </div>
                 </div>
                 <div class="row">
@@ -338,30 +338,30 @@
         <div class="col-12-6">
           <div class="background_sample">
             <form action="#">
-              <div class="epick-slider-steps">              
-                <div class="epick-slider-steps--body">
-                  <div class="epick-slider-steps--pill epick-slider-steps--pill__start">                  
+              <div class="steps">              
+                <div class="steps__body">
+                  <div class="steps__pill steps__pill--start">                  
                   </div>
-                  <div class="epick-slider-steps--range epick-slider-steps--range__start">
+                  <div class="steps__range steps__range--start">
                   </div>                
-                  <div class="epick-slider-steps--pill epick-slider-steps--pill__half">                  
+                  <div class="steps__pill steps__pill--half">                  
                   </div>
-                  <div class="epick-slider-steps--range epick-slider-steps--range__finish">
+                  <div class="steps__range steps__range--finish">
                   </div> 
-                  <div class="epick-slider-steps--pill epick-slider-steps--pill__finish">                  
+                  <div class="steps__pill steps__pill--finish">                  
                   </div>
-                  <div class="epick-slider-steps--pill epick-slider-steps--pill__active">                  
+                  <div class="steps__pill steps__pill--active">                  
                   </div>
                 </div>              
-                <div class="epick-slider-steps--legend">
+                <div class="steps__legend">
                   <div class="row">
                     <div class="col-12-4">
                       <span>Шаг 1</span>
                     </div>
-                    <div class="col-12-4 epick-slider-steps--txt-center">
+                    <div class="col-12-4 steps__txt-center">
                       <span>Шаг 2</span>
                     </div>
-                    <div class="col-12-4 epick-slider-steps--txt-right">
+                    <div class="col-12-4 steps__txt-right">
                       <span>Шаг 3</span>
                     </div>
                   </div>              
@@ -391,19 +391,19 @@
             <form action="#">
               <div class="progress-bar-wrap">
                 <div class="progress-bar" id="progress1">     
-                  <div class="pbar">                    
+                  <div class="progress-bar__ui">                    
                   </div>
-                  <div class="progress-bar--time">
-                    <div class="progress-time">                      
+                  <div class="progress-bar__time">
+                    <div class="progress-bar__time-start">                      
                     </div>
-                    <div class="elapsed">                      
+                    <div class="progress-bar__time-finish">                      
                     </div>  
                   </div>                  
                 </div>
                 <div class="progress-bar" id="progress2">
-                  <div class="percent">                  
+                  <div class="progress-bar__percent">                  
                   </div>
-                  <div class="pbar">                  
+                  <div class="progress-bar__ui">                  
                   </div>                
                 </div>
               </div>

@@ -1,7 +1,7 @@
 /***************************
 *******Progress bar*********
 ***************************/
-.pbar .ui-progressbar-value 
+.progress-bar__ui .ui-progressbar-value 
 {
 	display:block !important;
 }
@@ -17,6 +17,7 @@
 		{
 	  		height: 10px; 
 	  		background: #e6e9ed;
+	  		border-radius: 10px;
 		}
 		.ui-widget-header
 		{
@@ -37,28 +38,29 @@
 	  		background: #eeeeee ; 
 		}
 
-		.percent
+		&__percent
 		{	text-align: center;
 			color: #bfbfbf;
 		}
 
-		.elapsed
+		&__time
+		{
+			overflow: hidden;
+		}
+
+		&__time-finish
 		{
 			color: #aab2bd;
 			float: right;
 			font-size: 11px;
 		}
 
-		.progress-time
+		&__time-start
 		{
 			color: #aab2bd;
 			float: left;
 			font-size: 11px;
-		}
-		
-		.progress-bar--time{
-			overflow: hidden;
-		}
+		}			
 	}
 }
 

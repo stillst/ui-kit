@@ -6,38 +6,47 @@
 *********Interactive********
 ***************************/
 
-.js-message_link{
-	color:  #e86060;
-	text-decoration: none;
-  &:hover
+.js-tooltip
+{
+  background-color: #fff;  
+  padding: 20px 10px;
+  border-radius: 5px;
+  margin-bottom: 35px;
+  min-height: 120px;
+  text-align: center;
+
+  &__message
   {
-    ~.js-popup
+    color:  #e86060;
+    text-decoration: none;  
+  }
+
+  &__popup
+  {
+    padding: 3px 3px 3px 15px;
+    color: #fff;
+    border-radius: 5px;  
+    font-size: 13px;
+    margin-top: 15px;
+    background-color: @carrot-color;
+    position: relative;
+    cursor: pointer;
+    display: none;
+
+    /*triangle*/
+    &::before 
     {
-      display: block;
+      content: '';
+      position: absolute;
+      left: 45%;
+      top: -20px;
+      border: 10px solid transparent;
+      border-bottom: 10px solid #fc6e51;
     }
   }
 }
 
-.js-popup
+.visible_block
 {
-  padding: 3px 3px 3px 15px;
-  color: #fff;
-  border-radius: 5px;  
-  font-size: 13px;
-  margin-top: 15px;
-  background-color: @carrot-color;
-  position: relative;
-  cursor: pointer;
-  display: none;
-
-  /*triangle*/
-  &::before 
-  {
-  content: '';
-  position: absolute;
-  left: 45%;
-  top: -20px;
-  border: 10px solid transparent;
-  border-bottom: 10px solid #fc6e51;
-  }
+  display: block;
 }
